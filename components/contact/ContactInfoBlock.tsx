@@ -1,9 +1,9 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import ContactInfo from "@/components/shared/ContactInfo"
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 }
@@ -29,7 +29,7 @@ export default function ContactInfoBlock() {
 
       {/* Social label */}
       <div className="pt-4 border-t border-gray-100">
-        <p className="text-sm font-bold text-primary mb-3 uppercase tracking-wider">Follow Us</p>
+        <p className="text-sm font-bold text-primary mb-3 tracking-wide">Follow Us</p>
         <div className="flex flex-col gap-1 text-sm text-muted">
           <span>Instagram: @lwu_id</span>
           <span>TikTok: @lwu_id</span>

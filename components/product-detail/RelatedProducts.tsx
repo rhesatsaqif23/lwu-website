@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import SectionHeading from "@/components/shared/SectionHeading"
 import ProductCard from "@/components/shared/ProductCard"
 import { products } from "@/data/products"
@@ -9,7 +9,7 @@ interface RelatedProductsProps {
   currentSlug: string
 }
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.1 } },
 }

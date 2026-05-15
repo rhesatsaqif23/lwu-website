@@ -44,10 +44,10 @@ export default function ProductDetailHero({ product }: ProductDetailHeroProps) {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="flex flex-col gap-3"
           >
-            <span className="text-secondary font-semibold text-sm uppercase tracking-wider">
+            <span className="text-secondary font-semibold text-[11px] tracking-wide">
               {product.type}
             </span>
-            <h1 className="text-3xl md:text-4xl font-black text-white leading-tight">
+            <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight">
               {product.title}
             </h1>
             <p className="text-blue-200 text-sm">By LWU Team</p>

@@ -1,16 +1,16 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { Calendar, Tag, ArrowRight } from "lucide-react"
 import SectionHeading from "@/components/shared/SectionHeading"
 import { blogPreviews } from "@/data/blogPreviews"
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.1 } },
 }
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 }

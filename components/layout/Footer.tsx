@@ -32,11 +32,11 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <div className="w-9 h-9 rounded-lg bg-secondary/20 border border-secondary/40 flex items-center justify-center">
-                <span className="text-secondary font-black text-lg leading-none">L</span>
+                <span className="text-secondary font-bold text-lg leading-none">L</span>
               </div>
               <div className="flex flex-col leading-none">
-                <span className="font-black text-base text-white">Learning</span>
-                <span className="font-semibold text-xs text-secondary tracking-widest uppercase">With Us</span>
+                <span className="font-bold text-base text-white">Learning</span>
+                <span className="font-semibold text-[11px] text-secondary tracking-wide">With Us</span>
               </div>
             </Link>
             <p className="text-blue-200 text-sm leading-relaxed mb-5">
@@ -58,7 +58,7 @@ export default function Footer() {
 
           {/* Pages */}
           <div>
-            <h3 className="font-bold text-white text-sm uppercase tracking-widest mb-4">Pages</h3>
+            <h3 className="font-bold text-white text-sm tracking-wide mb-4">Pages</h3>
             <ul className="flex flex-col gap-2.5">
               {footerLinks.pages.map((link) => (
                 <li key={link.href}>
@@ -75,7 +75,7 @@ export default function Footer() {
 
           {/* Programs */}
           <div>
-            <h3 className="font-bold text-white text-sm uppercase tracking-widest mb-4">Programs</h3>
+            <h3 className="font-bold text-white text-sm tracking-wide mb-4">Programs</h3>
             <ul className="flex flex-col gap-2.5">
               {footerLinks.programs.map((link) => (
                 <li key={link.label}>
@@ -92,7 +92,7 @@ export default function Footer() {
 
           {/* Follow Us + Newsletter */}
           <div>
-            <h3 className="font-bold text-white text-sm uppercase tracking-widest mb-4">Follow Us</h3>
+            <h3 className="font-bold text-white text-sm tracking-wide mb-4">Follow Us</h3>
             <ul className="flex flex-col gap-3 mb-6">
               {footerLinks.social.map((item) => (
                 <li key={item.href}>
@@ -133,7 +133,7 @@ export default function Footer() {
           <p className="text-blue-300 text-sm">
             © 2024 Learning With Us. All rights reserved.
           </p>
-          <p className="text-blue-300 text-xs">
+          <p className="text-blue-300 text-[11px]">
             Built with ❤️ for English learners everywhere
           </p>
         </div>

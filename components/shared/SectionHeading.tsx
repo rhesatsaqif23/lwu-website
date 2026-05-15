@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 interface SectionHeadingProps {
@@ -13,12 +13,12 @@ interface SectionHeadingProps {
   light?: boolean
 }
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 }
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.1 } },
 }
@@ -49,7 +49,7 @@ export default function SectionHeading({
       {label && (
         <motion.span
           variants={fadeUp}
-          className="inline-block text-secondary font-semibold text-sm uppercase tracking-widest mb-2"
+          className="inline-block text-secondary font-semibold text-sm tracking-wide mb-2"
         >
           {label}
         </motion.span>

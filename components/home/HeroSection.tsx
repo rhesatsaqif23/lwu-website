@@ -1,10 +1,10 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { ArrowRight, Play } from "lucide-react"
-import Link from "next/link"
+import CTAButton from "@/components/shared/CTAButton"
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 32 },
   visible: (i: number) => ({
     opacity: 1,
@@ -38,7 +38,7 @@ export default function HeroSection() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight"
+              className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight"
             >
               The best online
               <span className="text-gradient block">learning platform.</span>
@@ -72,13 +72,13 @@ export default function HeroSection() {
               animate="visible"
               className="flex flex-wrap gap-4"
             >
-              <Link
+              <CTAButton
                 href="/products"
-                className="inline-flex items-center gap-2 bg-secondary text-white font-bold px-7 py-3.5 rounded-lg hover:bg-secondary-dark transition-all duration-200 shadow-lg hover:shadow-xl active:scale-[0.98] text-sm md:text-base"
-              >
-                GET STARTED
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+                label="Get Started"
+                variant="secondary"
+                size="lg"
+                icon={<ArrowRight className="w-4 h-4" />}
+              />
               <button className="inline-flex items-center gap-2 text-white font-semibold px-5 py-3.5 rounded-lg border border-white/20 hover:bg-white/10 transition-colors text-sm md:text-base">
                 <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
                   <Play className="w-3.5 h-3.5 text-white fill-white" />
@@ -100,7 +100,7 @@ export default function HeroSection() {
               <div className="absolute inset-0 rounded-3xl bg-white/10 border border-white/20 backdrop-blur-sm flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-24 h-24 rounded-2xl bg-secondary/20 border border-secondary/30 mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-secondary text-4xl font-black">L</span>
+                    <span className="text-secondary text-4xl font-bold">L</span>
                   </div>
                   <p className="text-white/60 text-sm">Hero Image Placeholder</p>
                   <p className="text-white/40 text-xs mt-1">Replace with LWU hero visual</p>

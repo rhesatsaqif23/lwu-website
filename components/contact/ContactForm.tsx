@@ -1,9 +1,9 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { Send } from "lucide-react"
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, x: 24 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } },
 }

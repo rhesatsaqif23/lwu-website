@@ -1,11 +1,11 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import SectionHeading from "@/components/shared/SectionHeading"
 import FeaturedProductCard from "@/components/shared/FeaturedProductCard"
 import { featuredProducts } from "@/data/products"
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.12 } },
 }

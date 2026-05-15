@@ -22,11 +22,11 @@ export default function ProductPriceBlock({ product }: ProductPriceBlockProps) {
       <div>
         <div className="flex items-center gap-2 mb-1">
           <Tag className="w-4 h-4 text-secondary" />
-          <span className="text-xs font-semibold text-secondary uppercase tracking-wider">
+          <span className="text-[11px] font-semibold text-secondary tracking-wide">
             Limited Time Offer
           </span>
         </div>
-        <p className="text-3xl font-black text-primary">{product.price}</p>
+        <p className="text-3xl font-bold text-primary">{product.price}</p>
       </div>
 
       {/* CTA */}

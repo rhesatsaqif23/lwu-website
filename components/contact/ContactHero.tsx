@@ -15,7 +15,7 @@ export default function ContactHero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl md:text-5xl font-black text-white mb-3"
+          className="text-4xl md:text-5xl font-bold text-white mb-3"
         >
           Contact Us
         </motion.h1>

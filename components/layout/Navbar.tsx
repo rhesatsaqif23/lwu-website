@@ -19,10 +19,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // Close mobile menu on route change
-  useEffect(() => {
-    setIsOpen(false)
-  }, [pathname])
+
 
   return (
     <>
@@ -40,18 +37,18 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group flex-shrink-0">
               <div className="w-9 h-9 rounded-lg gradient-primary flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-                <span className="text-secondary font-black text-lg leading-none">L</span>
+                <span className="text-secondary font-bold text-lg leading-none">L</span>
               </div>
               <div className="flex flex-col leading-none">
                 <span
                   className={cn(
-                    "font-black text-base tracking-tight transition-colors",
+                    "font-bold text-base tracking-tight transition-colors",
                     scrolled ? "text-primary" : "text-primary"
                   )}
                 >
                   Learning
                 </span>
-                <span className="font-semibold text-xs text-secondary tracking-widest uppercase">
+                <span className="font-semibold text-[11px] text-secondary tracking-wide">
                   With Us
                 </span>
               </div>
@@ -133,7 +130,7 @@ export default function Navbar() {
             >
               {/* Drawer header */}
               <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100">
-                <span className="font-black text-primary text-lg">Menu</span>
+                <span className="font-bold text-primary text-lg">Menu</span>
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-2 rounded-lg text-muted hover:bg-gray-100 transition-colors"
@@ -151,6 +148,7 @@ export default function Navbar() {
                     <Link
                       key={link.href}
                       href={link.href}
+                      onClick={() => setIsOpen(false)}
                       className={cn(
                         "px-4 py-3 rounded-lg text-sm font-semibold transition-colors duration-200",
                         isActive
@@ -168,6 +166,7 @@ export default function Navbar() {
               <div className="p-6 border-t border-gray-100">
                 <Link
                   href="/contact"
+                  onClick={() => setIsOpen(false)}
                   className="block w-full text-center bg-secondary text-white font-semibold text-sm px-5 py-3 rounded-lg hover:bg-secondary-dark transition-colors"
                 >
                   Get Started

@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 
 const stats = [
   { value: "7+", label: "Years Serving English Learners" },
@@ -9,12 +9,12 @@ const stats = [
   { value: "5+", label: "Course Programs Available" },
 ]
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.1 } },
 }
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 }
@@ -32,7 +32,7 @@ export default function KeyStats() {
         >
           {stats.map((stat) => (
             <motion.div key={stat.label} variants={fadeUp} className="text-center">
-              <p className="text-4xl md:text-5xl font-black text-secondary mb-1">{stat.value}</p>
+              <p className="text-4xl md:text-5xl font-bold text-secondary mb-1">{stat.value}</p>
               <p className="text-muted text-sm md:text-base leading-snug">{stat.label}</p>
             </motion.div>
           ))}

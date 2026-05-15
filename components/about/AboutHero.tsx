@@ -1,9 +1,9 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import Breadcrumb from "@/components/shared/Breadcrumb"
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 }
@@ -20,7 +20,7 @@ export default function AboutHero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 max-w-3xl leading-tight"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 max-w-3xl leading-tight"
         >
           Empowering Learners Since 2017
         </motion.h1>

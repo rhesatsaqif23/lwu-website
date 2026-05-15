@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     siteName: "Learning With Us",
     type: "website",
   },
+  icons: {
+    icon: "/learning-with-us.jpg",
+  },
 }
 
 export default function RootLayout({

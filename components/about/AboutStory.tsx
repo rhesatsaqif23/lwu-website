@@ -1,16 +1,16 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { Eye, Target } from "lucide-react"
 import SectionHeading from "@/components/shared/SectionHeading"
 import CTAButton from "@/components/shared/CTAButton"
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 }
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.12 } },
 }
@@ -71,7 +71,7 @@ export default function AboutStory() {
           </div>
 
           <motion.div variants={fadeUp}>
-            <CTAButton href="/products" label="EXPLORE COURSES" variant="primary" />
+            <CTAButton href="/products" label="Explore Courses" variant="primary" />
           </motion.div>
         </motion.div>
       </div>

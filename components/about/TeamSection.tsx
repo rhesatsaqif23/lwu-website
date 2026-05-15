@@ -1,16 +1,16 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { Star } from "lucide-react"
 import SectionHeading from "@/components/shared/SectionHeading"
 import { team } from "@/data/team"
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.1 } },
 }
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 }
@@ -43,13 +43,13 @@ export default function TeamSection() {
             >
               {/* Avatar */}
               <div className="w-20 h-20 rounded-full gradient-primary flex items-center justify-center mb-4 shadow-md">
-                <span className="text-white font-black text-2xl">
+                <span className="text-white font-bold text-2xl">
                   {member.name.charAt(0)}
                 </span>
               </div>
 
-              <h3 className="font-bold text-primary text-sm mb-0.5">{member.name}</h3>
-              <p className="text-muted text-xs mb-3">{member.title}</p>
+              <h3 className="font-bold text-primary text-[11px] mb-0.5">{member.name}</h3>
+              <p className="text-muted text-[11px] mb-3">{member.title}</p>
 
               {/* Rating */}
               <div className="flex items-center gap-1">

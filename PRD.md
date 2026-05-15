@@ -128,7 +128,7 @@ Vision & Mission content is embedded within the About Us page, not a standalone 
 
 | # | id (slug) | Title | Type | Price | Badge | Rating | Meta 1 | Meta 2 | CTA |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | `british-american-english` | British vs American English: 400 Words Explained | Ebook | $4.99 | BESTSELLER | 5.0 | Ebook | 400+ entries | Get Yours |
+| 1 | `british-american-english` | British vs American English: 400 Words Explained | Ebook | IDR 49,900 | BESTSELLER | 5.0 | Ebook | 400+ entries | Get Yours |
 | 2 | `grammar-comic-indonesian` | English Grammar Comic (Indonesian Translation) | Ebook | IDR 99,900 | NEW | 4.8 | Ebook | Comic + Translation | Get Yours |
 | 3 | `grammar-comic-english` | English Grammar Comic (English Only) | Ebook | IDR 99,900 | POPULAR | 4.7 | Ebook | English Only | Get Yours |
 | 4 | `scholarship-database` | Scholarship Database Ebook | Ebook | IDR 99,000 | NEW | 4.6 | Ebook | 100+ scholarships | Get Yours |

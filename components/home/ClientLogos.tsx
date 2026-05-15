@@ -11,7 +11,7 @@ export default function ClientLogos() {
   return (
     <section className="py-10 bg-surface border-y border-gray-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
-        <p className="text-center text-muted text-sm font-medium tracking-widest uppercase">
+        <p className="text-center text-muted text-[11px] font-medium tracking-wide">
           Trusted by learners from
         </p>
       </div>

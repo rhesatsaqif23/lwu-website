@@ -252,7 +252,7 @@ export const team = [
 
 - **Never change LWU's core content** (vision, mission, testimonials, contact info) without explicit instruction
 - All prices must match the PRD exactly:
-  - British vs American: `$4.99`
+  - British vs American: `IDR 49,900`
   - Grammar Comic (Indonesian): `IDR 99,900`
   - Grammar Comic (English): `IDR 99,900`
   - Scholarship Database: `IDR 99,000`

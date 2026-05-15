@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local cache and temporary files
+node_cache/
+PRD.md
+*text_replacement.md

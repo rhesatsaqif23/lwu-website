@@ -11,14 +11,14 @@ export default function ProductsHero() {
       </div>
       <div className="container-lg relative">
         <Breadcrumb items={[{ label: "Products & Services" }]} light className="mb-6" />
-        <span className="text-secondary font-semibold text-sm uppercase tracking-widest mb-2 block">
+        <span className="text-secondary font-semibold text-[11px] tracking-wide mb-2 block">
           Product
         </span>
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl md:text-5xl font-black text-white"
+          className="text-4xl md:text-5xl font-bold text-white"
         >
           All Products &amp; Services
         </motion.h1>

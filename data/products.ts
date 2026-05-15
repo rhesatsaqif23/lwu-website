@@ -8,11 +8,11 @@ export const products: Product[] = [
     type: "Ebook",
     badge: "BESTSELLER",
     rating: 5.0,
-    price: "$4.99",
+    price: "IDR 49,900",
     meta1: "Ebook",
     meta2: "400+ entries",
     ctaLabel: "Get Yours",
-    ctaLink: "https://learningwithus-lwu.com",
+    ctaLink: "https://shop.learningwithus-lwu.com/b/british-american-english",
   },
   {
     id: "grammar-comic-indonesian",
@@ -25,7 +25,7 @@ export const products: Product[] = [
     meta1: "Ebook",
     meta2: "Comic + Translation",
     ctaLabel: "Get Yours",
-    ctaLink: "https://learningwithus-lwu.com",
+    ctaLink: "https://shop.learningwithus-lwu.com/b/grammar-comic-indonesian",
   },
   {
     id: "grammar-comic-english",

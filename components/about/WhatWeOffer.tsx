@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { BookOpen, Target, Briefcase, Sparkles, ArrowRight } from "lucide-react"
 import SectionHeading from "@/components/shared/SectionHeading"
 import Link from "next/link"
@@ -32,12 +32,12 @@ const programs = [
   },
 ]
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.1 } },
 }
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 }
@@ -52,7 +52,7 @@ export default function WhatWeOffer() {
             href="/products"
             className="inline-flex items-center gap-2 text-secondary font-semibold text-sm hover:text-secondary-dark transition-colors self-start md:self-auto"
           >
-            VIEW ALL PROGRAMS <ArrowRight className="w-4 h-4" />
+            View All Programs <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
 

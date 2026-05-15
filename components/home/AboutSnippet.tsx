@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { Eye, Target } from "lucide-react"
 import SectionHeading from "@/components/shared/SectionHeading"
 import CTAButton from "@/components/shared/CTAButton"
@@ -18,12 +18,12 @@ const cards = [
   },
 ]
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 }
 
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.12 } },
 }
@@ -45,7 +45,7 @@ export default function AboutSnippet() {
             <div className="aspect-square max-w-sm mx-auto rounded-2xl gradient-primary flex items-center justify-center shadow-xl">
               <div className="text-center text-white/60 p-8">
                 <div className="w-16 h-16 rounded-xl bg-secondary/20 mx-auto mb-3 flex items-center justify-center">
-                  <span className="text-secondary text-2xl font-black">LWU</span>
+                  <span className="text-secondary text-2xl font-bold">LWU</span>
                 </div>
                 <p className="text-sm">About Image Placeholder</p>
               </div>
@@ -84,7 +84,7 @@ export default function AboutSnippet() {
             </div>
 
             <motion.div variants={fadeUp}>
-              <CTAButton href="/products" label="GET STARTED" variant="primary" />
+              <CTAButton href="/products" label="Get Started" variant="primary" />
             </motion.div>
           </motion.div>
         </div>

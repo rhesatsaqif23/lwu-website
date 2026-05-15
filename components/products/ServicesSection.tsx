@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { Users, ArrowRight } from "lucide-react"
 import SectionHeading from "@/components/shared/SectionHeading"
 import Link from "next/link"
@@ -33,8 +33,8 @@ const services: Service[] = [
   },
 ]
 
-const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }
-const fadeUp = {
+const stagger: Variants = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 }
@@ -65,11 +65,11 @@ export default function ServicesSection() {
               transition={{ duration: 0.2 }}
               className="bg-surface rounded-[12px] border border-gray-100 p-6 flex flex-col gap-3 hover:shadow-lg transition-shadow duration-300"
             >
-              <span className="text-xs font-semibold text-secondary uppercase tracking-wider">
+              <span className="text-[11px] font-semibold text-secondary tracking-wide">
                 {svc.type}
               </span>
               <h3 className="font-bold text-primary text-lg">{svc.title}</h3>
-              <p className="text-xs text-muted">By {svc.by}</p>
+              <p className="text-[11px] text-muted">By {svc.by}</p>
               <div className="flex items-center gap-1.5 text-sm text-muted">
                 <Users className="w-4 h-4 text-secondary" />
                 {svc.meta}
