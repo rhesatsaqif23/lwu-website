@@ -1,8 +1,11 @@
 "use client"
 
 import { motion, Variants } from "framer-motion"
-import { ArrowRight, Play } from "lucide-react"
-import CTAButton from "@/components/shared/CTAButton"
+import Link from "next/link"
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import { heroContent } from "@/data/hero"
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 32 },
@@ -13,115 +16,109 @@ const fadeUp: Variants = {
   }),
 }
 
-const floatCards = [
-  { label: "1,000+ Students", sub: "Across Indonesia & beyond", top: "top-8", right: "right-4 md:right-8" },
-  { label: "4.9★ Rating", sub: "Average instructor rating", top: "top-1/2", right: "-right-2 md:right-0" },
-  { label: "7+ Years", sub: "Serving English learners", bottom: "bottom-8", left: "left-0 md:-left-6" },
-]
-
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden gradient-hero py-20 md:py-28 lg:py-36">
+    <section className="relative w-full overflow-hidden bg-[#f6f9fe] min-h-[calc(100vh-80px)] lg:min-h-[calc(100vh-82px)] flex items-center">
       {/* Background decoration */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-3xl -translate-y-1/4 translate-x-1/4" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-3xl translate-y-1/4 -translate-x-1/4" />
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute left-1/2 top-1/2 h-[952px] w-[1920px] -translate-x-1/2 -translate-y-1/2 opacity-50">
+          {heroContent.images.background.map((img, idx) => (
+            <Image
+              key={idx}
+              className="absolute left-0 max-w-none"
+              style={{ top: img.top, width: '100%', height: 'auto' }}
+              alt="Background decoration"
+              src={img.src}
+              width={1920}
+              height={952}
+              sizes="100vw"
+            />
+          ))}
+        </div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-          {/* Left: Text content */}
-          <div className="flex flex-col gap-6">
-            <motion.h1
+      <div className="relative mx-auto flex w-full max-w-[1440px] flex-col items-center justify-between gap-10 px-4 py-12 sm:px-6 md:gap-12 lg:px-8 xl:px-24 xl:flex-row lg:gap-16">
+        {/* Left: Text content */}
+        <header className="flex w-full max-w-[623px] flex-col items-center text-center xl:items-start xl:text-left">
+          <div className="flex w-full flex-col items-center xl:items-start gap-4">
+            <motion.p 
               custom={0}
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight"
+              className="flex flex-wrap items-center justify-center xl:justify-start gap-2 text-base sm:text-lg font-medium text-primary"
             >
-              The best online
-              <span className="text-gradient block">learning platform.</span>
-            </motion.h1>
-
-            <motion.p
+              {heroContent.eyebrowParts.map((part, index) => (
+                <span
+                  key={index}
+                  className={cn(
+                    "whitespace-nowrap",
+                    part.highlighted && "border-b-2 border-secondary"
+                  )}
+                >
+                  {part.text}
+                </span>
+              ))}
+            </motion.p>
+            
+            <motion.h1 
               custom={1}
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="text-xl font-semibold text-blue-200"
+              className="w-full text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl lg:leading-[1.1]"
             >
-              Raise the Bar on Your e-Learning Experience.
-            </motion.p>
+              <span className="text-secondary">{heroContent.title.highlight}</span>
+              <span className="text-primary block sm:inline">
+                {heroContent.title.main}
+              </span>
+            </motion.h1>
 
-            <motion.p
+            <motion.p 
               custom={2}
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="text-blue-200/80 text-base md:text-lg leading-relaxed max-w-lg"
+              className="pt-4 sm:pt-6 lg:pt-8 text-base font-normal leading-relaxed text-gray-600 sm:text-lg lg:text-xl"
             >
-              e-learning particularly beneficial for adult learners who may have other
-              commitments such as work or family responsibilities.
+              {heroContent.description}
             </motion.p>
 
-            <motion.div
+            <motion.div 
               custom={3}
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="flex flex-wrap gap-4"
+              className="flex w-full flex-wrap items-center justify-center xl:justify-start gap-4 pt-8 lg:pt-10"
             >
-              <CTAButton
-                href="/products"
-                label="Get Started"
-                variant="secondary"
-                size="lg"
-                icon={<ArrowRight className="w-4 h-4" />}
-              />
-              <button className="inline-flex items-center gap-2 text-white font-semibold px-5 py-3.5 rounded-lg border border-white/20 hover:bg-white/10 transition-colors text-sm md:text-base">
-                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                  <Play className="w-3.5 h-3.5 text-white fill-white" />
-                </div>
-                Watch Demo
-              </button>
+              <Button
+                asChild
+                className="h-auto rounded-lg bg-primary px-8 py-3.5 sm:px-10 sm:py-4 text-sm sm:text-base font-bold text-white hover:bg-primary-dark transition-all shadow-lg hover:shadow-xl active:scale-95"
+              >
+                <Link href={heroContent.ctaLink}>{heroContent.ctaLabel}</Link>
+              </Button>
             </motion.div>
           </div>
+        </header>
 
-          {/* Right: Hero illustration placeholder + floating cards */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
-            className="relative hidden lg:flex items-center justify-center"
-          >
-            {/* Main illustration box */}
-            <div className="relative w-full max-w-md aspect-square">
-              <div className="absolute inset-0 rounded-3xl bg-white/10 border border-white/20 backdrop-blur-sm flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 rounded-2xl bg-secondary/20 border border-secondary/30 mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-secondary text-4xl font-bold">L</span>
-                  </div>
-                  <p className="text-white/60 text-sm">Hero Image Placeholder</p>
-                  <p className="text-white/40 text-xs mt-1">Replace with LWU hero visual</p>
-                </div>
-              </div>
-
-              {/* Floating cards */}
-              {floatCards.map((card, i) => (
-                <motion.div
-                  key={i}
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{ duration: 3 + i * 0.5, repeat: Infinity, ease: "easeInOut", delay: i * 0.7 }}
-                  className={`absolute ${card.top ?? ""} ${card.bottom ?? ""} ${card.right ?? ""} ${card.left ?? ""} bg-white rounded-xl shadow-xl p-3 min-w-[140px] z-10`}
-                >
-                  <p className="font-bold text-primary text-sm">{card.label}</p>
-                  <p className="text-muted text-xs">{card.sub}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
+        {/* Right: Hero Image */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          className="flex w-full max-w-[500px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[800px] flex-1 items-stretch justify-center"
+        >
+          <Image
+            className="object-contain"
+            style={{ width: '100%', height: 'auto' }}
+            alt="Learning illustration"
+            src={heroContent.images.main}
+            width={800}
+            height={740}
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 800px"
+            priority
+          />
+        </motion.div>
       </div>
     </section>
   )

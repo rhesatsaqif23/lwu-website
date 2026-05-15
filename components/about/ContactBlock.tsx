@@ -12,11 +12,11 @@ const fadeUp: Variants = {
 
 export default function ContactBlock() {
   return (
-    <section className="section-padding gradient-primary relative overflow-hidden">
+    <section className="py-20 md:py-24 bg-primary relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
       </div>
-      <div className="container-lg relative">
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <motion.div
             variants={fadeUp}

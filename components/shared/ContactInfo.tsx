@@ -13,7 +13,7 @@ export default function ContactInfo({ light = false }: ContactInfoProps) {
     <div className="flex flex-col gap-5">
       {/* Address */}
       <div className="flex items-start gap-3">
-        <MapPin className={`w-5 h-5 mt-0.5 flex-shrink-0 ${iconColor}`} />
+        <MapPin className={`w-5 h-5 mt-0.5 shrink-0 ${iconColor}`} />
         <div>
           <p className={`font-semibold text-sm ${textStrong}`}>Address</p>
           <p className={`text-sm ${textBase}`}>South Tangerang, Banten, Indonesia</p>
@@ -22,7 +22,7 @@ export default function ContactInfo({ light = false }: ContactInfoProps) {
 
       {/* Phone */}
       <div className="flex items-start gap-3">
-        <Phone className={`w-5 h-5 mt-0.5 flex-shrink-0 ${iconColor}`} />
+        <Phone className={`w-5 h-5 mt-0.5 shrink-0 ${iconColor}`} />
         <div>
           <p className={`font-semibold text-sm ${textStrong}`}>Phone</p>
           <p className={`text-sm ${textBase}`}>+62 812-1234-5678 (Head Office)</p>
@@ -32,7 +32,7 @@ export default function ContactInfo({ light = false }: ContactInfoProps) {
 
       {/* Email */}
       <div className="flex items-start gap-3">
-        <Mail className={`w-5 h-5 mt-0.5 flex-shrink-0 ${iconColor}`} />
+        <Mail className={`w-5 h-5 mt-0.5 shrink-0 ${iconColor}`} />
         <div>
           <p className={`font-semibold text-sm ${textStrong}`}>Email</p>
           <a

@@ -12,13 +12,13 @@ const stagger: Variants = {
 
 export default function ProductGrid() {
   return (
-    <section className="section-padding bg-white">
-      <div className="container-lg">
+    <section className="py-20 md:py-[100px] bg-white">
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24">
         <SectionHeading
           label="Our Products"
-          title="Products & Services"
+          title="Featured Products"
           align="center"
-          className="mb-12"
+          className="mb-12 md:mb-[70px]"
         />
 
         <motion.div
@@ -26,10 +26,10 @@ export default function ProductGrid() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid w-full grid-cols-1 gap-[30px] sm:grid-cols-2 lg:grid-cols-3"
         >
-          {products.map((product) => (
-            <ProductCard key={product.id} {...product} />
+          {products.slice(0, 3).map((product) => (
+            <ProductCard key={product.id} product={product} />
           ))}
         </motion.div>
       </div>

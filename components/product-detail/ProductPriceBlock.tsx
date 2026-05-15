@@ -31,13 +31,13 @@ export default function ProductPriceBlock({ product }: ProductPriceBlockProps) {
 
       {/* CTA */}
       <button className="w-full bg-secondary hover:bg-secondary-dark text-white font-bold py-3.5 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2">
-        {isContact ? "Contact Us" : product.ctaLabel}
+        {isContact ? "Contact Us" : "Get Yours"}
         <ArrowRight className="w-4 h-4" />
       </button>
 
       {/* Guarantee */}
       <div className="flex items-start gap-3 pt-4 border-t border-gray-100">
-        <ShieldCheck className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+        <ShieldCheck className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
         <p className="text-xs text-muted leading-relaxed">
           <span className="font-semibold text-primary">30-Day Money-Back Guarantee.</span>{" "}
           Not satisfied? We&apos;ll give you a full refund, no questions asked.

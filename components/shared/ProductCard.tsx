@@ -2,20 +2,14 @@
 
 import { motion, Variants } from "framer-motion"
 import Link from "next/link"
-import { Star, BookOpen, GraduationCap } from "lucide-react"
+import Image from "next/image"
+import { Card, CardContent } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
 import type { Product } from "@/types"
 
-interface ProductCardProps extends Product {
+interface ProductCardProps {
+  product: Product
   className?: string
-}
-
-const badgeColors: Record<string, string> = {
-  BESTSELLER: "bg-accent text-white",
-  NEW:        "bg-secondary text-white",
-  POPULAR:    "bg-primary text-white",
-  FEATURED:   "bg-secondary text-white",
-  PROMO:      "bg-red-500 text-white",
 }
 
 const fadeUp: Variants = {
@@ -23,88 +17,84 @@ const fadeUp: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 }
 
-export default function ProductCard({
-  slug,
-  title,
-  type,
-  badge,
-  rating,
-  price,
-  meta1,
-  meta2,
-  ctaLabel,
-  className,
-}: ProductCardProps) {
-  const badgeClass = badgeColors[badge] ?? "bg-muted text-white"
-
+export default function ProductCard({ product, className }: ProductCardProps) {
   return (
     <motion.div
       variants={fadeUp}
-      whileHover={{ scale: 1.02, y: -4 }}
+      whileHover={{ y: -4 }}
       transition={{ duration: 0.2 }}
-      className={cn(
-        "group relative bg-white rounded-[12px] border border-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden",
-        className
-      )}
+      className={cn("h-full cursor-pointer", className)}
     >
-      <Link href={`/products/${slug}`} className="flex flex-col h-full">
-        {/* Badge */}
-        <div className="absolute top-4 left-4 z-10">
-          <span className={cn("text-[11px] font-bold px-3 py-1 rounded-full", badgeClass)}>
-            {badge}
-          </span>
-        </div>
-
-        {/* Thumbnail placeholder */}
-        <div className="h-44 gradient-primary flex items-center justify-center">
-          {type === "Ebook" ? (
-            <BookOpen className="w-16 h-16 text-secondary opacity-80" />
-          ) : (
-            <GraduationCap className="w-16 h-16 text-secondary opacity-80" />
-          )}
-        </div>
-
-        {/* Content */}
-        <div className="flex flex-col flex-1 p-5 gap-3">
-          {/* Type */}
-          <span className="text-[11px] font-semibold text-secondary tracking-wide">
-            {type}
-          </span>
-
-          {/* Title */}
-          <h3 className="font-bold text-primary text-base leading-snug line-clamp-2 group-hover:text-secondary transition-colors duration-200">
-            {title}
-          </h3>
-
-          {/* Meta */}
-          <div className="flex items-center gap-3 text-xs text-muted">
-            <span>{meta1}</span>
-            <span className="w-1 h-1 rounded-full bg-muted inline-block" />
-            <span>{meta2}</span>
-          </div>
-
-          {/* Rating */}
-          <div className="flex items-center gap-1">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <Star
-                key={i}
-                className={cn(
-                  "w-3.5 h-3.5",
-                  i < Math.round(rating) ? "fill-accent text-accent" : "text-gray-200"
-                )}
-              />
-            ))}
-            <span className="text-xs text-muted ml-1">{rating.toFixed(1)}</span>
-          </div>
-
-          {/* Price + CTA */}
-          <div className="flex items-center justify-between mt-auto pt-3 border-t border-gray-100">
-            <span className="font-bold text-primary text-sm">{price}</span>
-            <span className="text-sm font-semibold text-secondary group-hover:text-secondary-dark transition-colors duration-200">
-              {ctaLabel} →
-            </span>
-          </div>
-        </div>
+      <Link href={`/products/${product.slug}`} className="block h-full">
+        <Card className="rounded-[10px] border-0 bg-white shadow-[0px_4px_15px_#0000001a] h-full overflow-hidden">
+          <CardContent className="flex h-full flex-col gap-6 p-0 pt-3 pb-[9px]">
+            <div className="px-2.5">
+              <div className="overflow-hidden rounded-[10px] aspect-16/11 relative bg-gray-50">
+                <Image
+                  src={product.image}
+                  alt={product.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 380px"
+                />
+              </div>
+            </div>
+            
+            <div className="flex flex-1 flex-col px-5">
+              <div className="flex flex-col">
+                <div className="flex items-start justify-between gap-4 pb-[5px]">
+                  <div className="text-[13px] font-semibold text-slate-500 whitespace-nowrap">
+                    Available Now
+                  </div>
+                  <div className="inline-flex items-center justify-center rounded-[5px] bg-primary px-[9px] py-1 text-[11px] font-bold text-white whitespace-nowrap">
+                    {product.badge}
+                  </div>
+                </div>
+                
+                <div className="pb-5 min-h-[60px]">
+                  <h3 className="block text-2xl font-bold leading-[30px] text-primary group-hover:text-secondary transition-colors line-clamp-2">
+                    {product.title}
+                  </h3>
+                </div>
+                
+                <div className="flex flex-wrap items-center gap-x-5 gap-y-2 border-b-2 border-[#f4f4f4] pb-[11px]">
+                  {product.meta.map((item, index) => (
+                    <div key={index} className="inline-flex items-center gap-2.5">
+                      <div className="flex h-[30px] w-[30px] items-center justify-center rounded-full border border-[#d9d9d9] bg-white">
+                        {item.icon ? (
+                          <Image
+                            src={item.icon}
+                            alt=""
+                            width={16}
+                            height={16}
+                            className="h-4 w-4"
+                          />
+                        ) : item.iconBg ? (
+                          <div className={cn("h-3.5 w-[15px] bg-contain bg-no-repeat bg-center", item.iconBg)} />
+                        ) : null}
+                      </div>
+                      <div className="text-[13px] font-semibold text-slate-500 whitespace-nowrap">
+                        {item.text}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="flex items-center justify-between gap-4 pt-[30px] pb-5 mt-auto">
+                <div className="text-2xl font-bold text-primary">
+                  {product.price}
+                </div>
+                <div className="inline-flex items-center gap-2 text-sm font-semibold text-[#ff6b6b] hover:opacity-80 transition-opacity">
+                  {product.buyIcon && (
+                    <Image src={product.buyIcon} alt="" width={18} height={18} className="h-[18px] w-[18px]" />
+                  )}
+                  <span>Buy Now</span>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </Link>
     </motion.div>
   )

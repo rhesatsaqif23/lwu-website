@@ -1,17 +1,23 @@
 // ─── Product Types ────────────────────────────────────────────────────────────
 
+export interface ProductMeta {
+  icon?: string;
+  iconBg?: string;
+  text: string;
+}
+
 export interface Product {
-  id: string
-  slug: string
-  title: string
-  type: "Ebook" | "Online Course"
-  badge: string
-  rating: number
-  price: string
-  meta1: string
-  meta2: string
-  ctaLabel: "Buy Now" | "Enroll Now" | "Get Yours"
-  ctaLink: string
+  id: string;
+  slug: string;
+  title: string;
+  type: string;
+  badge: string;
+  rating: number;
+  price: string;
+  meta: ProductMeta[];
+  image: string;
+  ctaLink: string;
+  buyIcon?: string;
 }
 
 export interface FeaturedProduct {
@@ -37,7 +43,7 @@ export interface Testimonial {
   name: string
   title: string
   quote: string
-  avatar?: string
+  image: string
   rating: number
 }
 
@@ -70,10 +76,10 @@ export interface NavLink {
 // ─── Program Category Types ───────────────────────────────────────────────────
 
 export interface ProgramCategory {
-  id: string
-  title: string
-  description: string
-  icon: string
+  id: string;
+  title: string;
+  description: string;
+  href: string;
 }
 
 // ─── Service Types ────────────────────────────────────────────────────────────

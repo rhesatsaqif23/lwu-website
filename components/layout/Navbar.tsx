@@ -40,7 +40,7 @@ export default function Navbar() {
             <Image
               className="size-10 shrink-0 object-cover"
               alt="Learning With Us Logo"
-              src="/assets/cropped-circle-image-1-1.png"
+              src="/figmaAssets/cropped-circle-image-1-1.png"
               width={40}
               height={40}
             />
@@ -84,7 +84,7 @@ export default function Navbar() {
             {/* User Profile */}
             <Link className="flex items-center gap-2 group" href="#">
               <Avatar className="size-9 rounded-full border border-gray-200">
-                <AvatarImage src="/assets/user-image.png" alt="Rhesa" />
+                <AvatarImage src="/figmaAssets/user-image.png" alt="Rhesa" />
                 <AvatarFallback className="text-xs bg-primary text-white">
                   R
                 </AvatarFallback>
@@ -108,7 +108,7 @@ export default function Navbar() {
               <Image
                 className="size-6"
                 alt="Notification Icon"
-                src="/assets/component-1-1.svg"
+                src="/figmaAssets/component-1-1.svg"
                 width={24}
                 height={24}
               />
@@ -179,7 +179,7 @@ export default function Navbar() {
               {/* Drawer Profile (Mobile) */}
               <div className="px-6 py-4 border-b border-gray-50 flex items-center gap-3">
                 <Avatar className="h-10 w-10 rounded-full border border-gray-200">
-                  <AvatarImage src="/assets/user-image.png" alt="Rhesa" />
+                  <AvatarImage src="/figmaAssets/user-image.png" alt="Rhesa" />
                   <AvatarFallback>R</AvatarFallback>
                 </Avatar>
                 <div className="flex flex-col">

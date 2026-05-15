@@ -67,8 +67,9 @@ export default function ProductDetailHero({ product }: ProductDetailHeroProps) {
 
             {/* Meta row */}
             <div className="flex flex-wrap gap-4 text-sm text-blue-200">
-              <span className="bg-white/10 px-3 py-1 rounded-full">{product.meta1}</span>
-              <span className="bg-white/10 px-3 py-1 rounded-full">{product.meta2}</span>
+              {product.meta.map((m, i) => (
+                <span key={i} className="bg-white/10 px-3 py-1 rounded-full">{m.text}</span>
+              ))}
               <span className="bg-white/10 px-3 py-1 rounded-full">Self-paced</span>
             </div>
           </motion.div>

@@ -2,8 +2,8 @@
 
 import { motion, Variants } from "framer-motion"
 import SectionHeading from "@/components/shared/SectionHeading"
-import FeaturedProductCard from "@/components/shared/FeaturedProductCard"
-import { featuredProducts } from "@/data/products"
+import ProductCard from "@/components/shared/ProductCard"
+import { products } from "@/data/products"
 
 const stagger: Variants = {
   hidden: {},
@@ -12,8 +12,8 @@ const stagger: Variants = {
 
 export default function FeaturedProducts() {
   return (
-    <section className="section-padding bg-surface">
-      <div className="container-lg">
+    <section className="py-20 bg-surface">
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24">
         <SectionHeading
           label="Top Picks"
           title="Featured Products"
@@ -26,10 +26,10 @@ export default function FeaturedProducts() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="flex flex-col gap-5"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {featuredProducts.map((product) => (
-            <FeaturedProductCard key={product.slug} {...product} />
+          {products.slice(0, 3).map((product) => (
+            <ProductCard key={product.id} product={product} />
           ))}
         </motion.div>
       </div>

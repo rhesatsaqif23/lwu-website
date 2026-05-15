@@ -2,35 +2,32 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Instagram, Music2, Facebook, Youtube } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { cn } from "@/lib/utils"
 
 const socialLinks = [
   {
     label: "Instagram",
     href: "https://instagram.com/lwu_id",
-    icon: "/assets/ri-instagram-fill.svg",
+    icon: "/figmaAssets/ri-instagram-fill.svg",
     size: 25,
   },
   {
     label: "Facebook",
     href: "#",
-    icon: "/assets/vector-6.svg",
+    icon: "/figmaAssets/vector-6.svg",
     size: 10,
   },
   {
     label: "YouTube",
     href: "#",
-    icon: "/assets/vector-12.svg",
+    icon: "/figmaAssets/vector-12.svg",
     size: 21,
   },
   {
     label: "TikTok",
     href: "https://tiktok.com/@lwu_id",
-    icon: "/assets/ic-baseline-tiktok.svg",
+    icon: "/figmaAssets/ic-baseline-tiktok.svg",
     size: 25,
   },
 ]
@@ -55,9 +52,10 @@ function FooterBrandSection() {
       <div className="flex w-full flex-col items-start gap-8">
         <header className="flex w-full items-center gap-3">
           <Image
-            className="size-12 object-cover"
+            className="object-cover"
+            style={{ width: '48px', height: 'auto' }}
             alt="Learning With Us Logo"
-            src="/assets/cropped-circle-image-1-1.png"
+            src="/figmaAssets/cropped-circle-image-1-1.png"
             width={50}
             height={50}
           />
@@ -90,7 +88,7 @@ function FooterBrandSection() {
                     src={item.icon}
                     width={item.size}
                     height={25}
-                    style={{ height: '25px', width: 'auto' }}
+                    style={{ width: `${item.size}px`, height: 'auto' }}
                   />
                 </a>
               </li>
