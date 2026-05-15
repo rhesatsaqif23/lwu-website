@@ -1,0 +1,67 @@
+0 verbose cli D:\Node.js\node.exe D:\Node.js\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.13.1
+3 silly config load:file:D:\Node.js\node_modules\npm\npmrc
+4 silly config load:file:D:\Intern\lwu-website\.npmrc
+5 silly config load:file:C:\Users\Rhesa Tsaqif\.npmrc
+6 silly config load:file:C:\Users\Rhesa Tsaqif\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install lucide-react@0.383.0
+8 verbose argv "install" "lucide-react@0.383.0"
+9 verbose logfile logs-max:10 dir:D:\Intern\lwu-website\node_cache\_logs\2026-05-15T05_05_58_512Z-
+10 verbose logfile D:\Intern\lwu-website\node_cache\_logs\2026-05-15T05_05_58_512Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly idealTree buildDeps
+14 silly fetch manifest lucide-react@0.383.0
+15 silly packumentCache full:https://registry.npmjs.org/lucide-react cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/lucide-react 1213ms (cache revalidated)
+17 silly packumentCache full:https://registry.npmjs.org/lucide-react set size:2265850 disposed:false
+18 silly fetch manifest react@19.2.4
+19 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+20 http fetch GET 200 https://registry.npmjs.org/react 116ms (cache revalidated)
+21 silly packumentCache full:https://registry.npmjs.org/react set size:6650647 disposed:false
+22 silly fetch manifest react@^16.5.1 || ^17.0.0 || ^18.0.0
+23 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+24 http cache https://registry.npmjs.org/react 38ms (cache hit)
+25 silly packumentCache full:https://registry.npmjs.org/react set size:6650647 disposed:false
+26 verbose stack Error: unable to resolve dependency tree
+26 verbose stack     at #failPeerConflict (D:\Node.js\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:1363:25)
+26 verbose stack     at #loadPeerSet (D:\Node.js\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:1329:33)
+26 verbose stack     at async #buildDepStep (D:\Node.js\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:904:11)
+26 verbose stack     at async Arborist.buildIdealTree (D:\Node.js\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:181:7)
+26 verbose stack     at async Promise.all (index 1)
+26 verbose stack     at async Arborist.reify (D:\Node.js\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\reify.js:131:5)
+26 verbose stack     at async Install.exec (D:\Node.js\node_modules\npm\lib\commands\install.js:150:5)
+26 verbose stack     at async Npm.exec (D:\Node.js\node_modules\npm\lib\npm.js:207:9)
+26 verbose stack     at async module.exports (D:\Node.js\node_modules\npm\lib\cli\entry.js:74:5)
+27 error code ERESOLVE
+28 error ERESOLVE unable to resolve dependency tree
+29 error
+30 error While resolving: lwu-website@0.1.0
+30 error Found: react@19.2.4
+30 error node_modules/react
+30 error   react@"19.2.4" from the root project
+30 error
+30 error Could not resolve dependency:
+30 error peer react@"^16.5.1 || ^17.0.0 || ^18.0.0" from lucide-react@0.383.0
+30 error node_modules/lucide-react
+30 error   lucide-react@"0.383.0" from the root project
+30 error
+30 error Fix the upstream dependency conflict, or retry
+30 error this command with --force or --legacy-peer-deps
+30 error to accept an incorrect (and potentially broken) dependency resolution.
+31 error
+31 error
+31 error For a full report see:
+31 error D:\Intern\lwu-website\node_cache\_logs\2026-05-15T05_05_58_512Z-eresolve-report.txt
+32 silly unfinished npm timer reify 1778821561318
+33 silly unfinished npm timer reify:loadTrees 1778821561423
+34 silly unfinished npm timer idealTree:buildDeps 1778821562755
+35 silly unfinished npm timer idealTree:#root 1778821562756
+36 verbose cwd D:\Intern\lwu-website
+37 verbose os Windows_NT 10.0.22631
+38 verbose node v22.13.1
+39 verbose npm  v10.9.2
+40 verbose exit 1
+41 verbose code 1
+42 error A complete log of this run can be found in: D:\Intern\lwu-website\node_cache\_logs\2026-05-15T05_05_58_512Z-debug-0.log
