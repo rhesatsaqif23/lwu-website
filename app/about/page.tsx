@@ -2,9 +2,8 @@ import type { Metadata } from "next"
 import AboutHero from "@/components/about/AboutHero"
 import KeyStats from "@/components/about/KeyStats"
 import AboutStory from "@/components/about/AboutStory"
-import WhatWeOffer from "@/components/about/WhatWeOffer"
+import ProgramCategories from "@/components/home/ProgramCategories"
 import TeamSection from "@/components/about/TeamSection"
-import Testimonials from "@/components/home/Testimonials"
 import BlogPreviews from "@/components/about/BlogPreviews"
 import ContactBlock from "@/components/about/ContactBlock"
 
@@ -16,15 +15,14 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <>
+    <main>
       <AboutHero />
       <KeyStats />
       <AboutStory />
-      <WhatWeOffer />
+      <ProgramCategories />
       <TeamSection />
-      <Testimonials />
       <BlogPreviews />
       <ContactBlock />
-    </>
+    </main>
   )
 }

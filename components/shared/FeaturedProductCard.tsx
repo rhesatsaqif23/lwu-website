@@ -31,7 +31,7 @@ export default function FeaturedProductCard({
       whileHover={{ scale: 1.015, y: -4 }}
       transition={{ duration: 0.2 }}
       className={cn(
-        "group bg-white rounded-[12px] border border-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden",
+        "group bg-white rounded-card border border-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden",
         className
       )}
     >

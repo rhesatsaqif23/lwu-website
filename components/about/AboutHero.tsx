@@ -10,11 +10,11 @@ const fadeUp: Variants = {
 
 export default function AboutHero() {
   return (
-    <section className="gradient-hero py-16 md:py-24 relative overflow-hidden">
+    <section className="bg-primary py-16 md:py-24 relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
       </div>
-      <div className="container-lg relative">
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24 relative">
         <Breadcrumb items={[{ label: "About Us" }]} light className="mb-6" />
         <motion.h1
           variants={fadeUp}

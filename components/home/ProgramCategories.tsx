@@ -1,51 +1,19 @@
 "use client"
 
-import { motion, Variants } from "framer-motion"
-import { BookOpen, Target, Briefcase, Sparkles } from "lucide-react"
-import SectionHeading from "@/components/shared/SectionHeading"
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
+import { motion, Variants } from "framer-motion";
+import { programsData } from "@/data/programs";
+import { BookOpen, GraduationCap, Briefcase, Zap, LucideIcon } from "lucide-react";
+import type { ProgramCategory } from "@/types";
 
-const categories = [
-  {
-    id: "general-english",
-    icon: BookOpen,
-    title: "General English",
-    description:
-      "Build everyday English skills for communication, reading, writing, and speaking at any level.",
-    color: "bg-blue-50 border-blue-100",
-    iconBg: "bg-primary/10",
-    iconColor: "text-primary",
-  },
-  {
-    id: "ielts",
-    icon: Target,
-    title: "IELTS Preparation",
-    description:
-      "Targeted preparation to help you achieve your IELTS target score for study or career abroad.",
-    color: "bg-cyan-50 border-cyan-100",
-    iconBg: "bg-secondary/10",
-    iconColor: "text-secondary",
-  },
-  {
-    id: "business",
-    icon: Briefcase,
-    title: "Business English",
-    description:
-      "Professional English for workplace communication, presentations, emails, and negotiations.",
-    color: "bg-amber-50 border-amber-100",
-    iconBg: "bg-accent/10",
-    iconColor: "text-accent",
-  },
-  {
-    id: "self-dev",
-    icon: Sparkles,
-    title: "Self-Development",
-    description:
-      "Courses on leadership, emotional intelligence, negotiation, and personal effectiveness.",
-    color: "bg-purple-50 border-purple-100",
-    iconBg: "bg-purple-100",
-    iconColor: "text-purple-600",
-  },
-]
+const iconMap: Record<string, LucideIcon> = {
+  "general-english": BookOpen,
+  "ielts": GraduationCap,
+  "business": Briefcase,
+  "self-dev": Zap,
+};
 
 const stagger: Variants = {
   hidden: {},
@@ -57,43 +25,82 @@ const fadeUp: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 }
 
+const ProgramCard = ({ category }: { category: ProgramCategory }) => {
+  const Icon = iconMap[category.id] || BookOpen;
+
+  return (
+    <motion.div variants={fadeUp} className="flex w-full flex-col items-center h-full">
+      <div className="w-full max-w-[357.5px] h-full">
+        <Card className="h-full w-full rounded-none border-0 bg-white p-2.5 shadow-[0px_4px_15px_#0000001a] hover:shadow-lg transition-shadow duration-300">
+          <CardContent className="flex h-full flex-col items-center justify-start rounded-[10px] px-5 py-8 md:px-[30px] md:pb-[30px] md:pt-10">
+            <Link
+              href={category.href}
+              className="flex w-full flex-col items-center text-center group h-full"
+            >
+              <div className="relative h-20 w-20 flex items-center justify-center mb-8">
+                {/* Background Circle */}
+                <div className="absolute inset-0 bg-blue-50/80 rounded-full scale-110 z-0 group-hover:scale-125 transition-transform duration-300" />
+                
+                {/* Lucide Icon */}
+                <div className="relative z-10 flex items-center justify-center">
+                  <Icon 
+                    className="w-10 h-10 text-primary group-hover:scale-110 transition-transform duration-300" 
+                    strokeWidth={1.5}
+                  />
+                </div>
+              </div>
+
+              <div className="flex h-0.5 w-[30px] bg-primary group-hover:w-full transition-all duration-300 mb-8" />
+
+              <header className="pb-[20px] mt-auto">
+                <h3 className="font-sans text-2xl font-bold leading-[30px] tracking-normal text-primary group-hover:text-secondary transition-colors">
+                  {category.title}
+                </h3>
+              </header>
+
+              <p className="font-sans text-base font-normal leading-6 tracking-normal text-primary mb-auto">
+                {category.description}
+              </p>
+            </Link>
+          </CardContent>
+        </Card>
+      </div>
+    </motion.div>
+  );
+};
+
 export default function ProgramCategories() {
   return (
-    <section className="section-padding bg-surface">
-      <div className="container-lg">
-        <SectionHeading
-          label="Our Programs"
-          title="Program Categories"
-          align="center"
-          className="mb-12"
-        />
+    <section className="w-full bg-[#f6f9fe] py-16 md:py-[100px]">
+      <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center gap-[50px] md:gap-[70px] px-4 sm:px-6 lg:px-8 xl:px-24">
+        <section className="flex w-full justify-center self-stretch">
+          <div className="flex w-full max-w-[367px] flex-col items-center gap-3.5">
+            <Badge
+              variant="secondary"
+              className="h-auto rounded-[5px] bg-blue-50 px-[15px] py-1 font-sans text-center text-[13px] font-semibold leading-6 tracking-normal text-primary hover:bg-blue-100 border-none"
+            >
+              {programsData.sectionContent.eyebrow}
+            </Badge>
+            <header className="flex w-full flex-col items-center">
+              <h2 className="font-sans text-center text-3xl md:text-4xl font-bold leading-tight tracking-tight text-primary">
+                {programsData.sectionContent.title}
+              </h2>
+            </header>
+          </div>
+        </section>
 
         <motion.div
           variants={stagger}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid w-full grid-cols-1 place-items-stretch gap-[30px] sm:grid-cols-2 lg:grid-cols-4"
         >
-          {categories.map((cat) => (
-            <motion.div
-              key={cat.id}
-              variants={fadeUp}
-              whileHover={{ scale: 1.02, y: -4 }}
-              transition={{ duration: 0.2 }}
-              className={`rounded-[12px] border p-6 flex flex-col gap-4 hover:shadow-lg transition-shadow duration-300 ${cat.color}`}
-            >
-              <div className={`w-12 h-12 rounded-xl ${cat.iconBg} flex items-center justify-center`}>
-                <cat.icon className={`w-6 h-6 ${cat.iconColor}`} />
-              </div>
-              <div>
-                <h3 className="font-bold text-primary text-base mb-1.5">{cat.title}</h3>
-                <p className="text-muted text-sm leading-relaxed">{cat.description}</p>
-              </div>
-            </motion.div>
+          {programsData.categories.map((category) => (
+            <ProgramCard key={category.id} category={category} />
           ))}
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

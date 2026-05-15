@@ -17,8 +17,8 @@ const fadeUp: Variants = {
 
 export default function BlogPreviews() {
   return (
-    <section className="section-padding bg-surface">
-      <div className="container-lg">
+    <section className="py-20 md:py-24 bg-surface">
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24">
         <SectionHeading
           label="Updates"
           title="Latest From LWU"

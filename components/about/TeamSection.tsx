@@ -17,8 +17,8 @@ const fadeUp: Variants = {
 
 export default function TeamSection() {
   return (
-    <section className="section-padding bg-white">
-      <div className="container-lg">
+    <section className="py-20 md:py-24 bg-white">
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24">
         <SectionHeading
           label="Team"
           title="Our Expert Team"

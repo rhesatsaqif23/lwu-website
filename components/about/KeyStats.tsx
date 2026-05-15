@@ -2,12 +2,7 @@
 
 import { motion, Variants } from "framer-motion"
 
-const stats = [
-  { value: "7+", label: "Years Serving English Learners" },
-  { value: "1,000+", label: "Students Achieved Their Goals" },
-  { value: "15+", label: "Certified Instructors" },
-  { value: "5+", label: "Course Programs Available" },
-]
+import { stats } from "@/data/about"
 
 const stagger: Variants = {
   hidden: {},
@@ -22,7 +17,7 @@ const fadeUp: Variants = {
 export default function KeyStats() {
   return (
     <section className="py-12 bg-white border-b border-gray-100">
-      <div className="container-lg">
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24">
         <motion.div
           variants={stagger}
           initial="hidden"

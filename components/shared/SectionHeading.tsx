@@ -47,17 +47,22 @@ export default function SectionHeading({
       className={cn(alignClass, className)}
     >
       {label && (
-        <motion.span
+        <motion.div
           variants={fadeUp}
-          className="inline-block text-secondary font-semibold text-sm tracking-wide mb-2"
+          className="mb-4"
         >
-          {label}
-        </motion.span>
+          <span className={cn(
+            "inline-block rounded-[5px] px-[15px] py-1 text-[13px] font-semibold leading-6 tracking-normal",
+            light ? "bg-white/10 text-white" : "bg-blue-50 text-primary"
+          )}>
+            {label}
+          </span>
+        </motion.div>
       )}
       <motion.h2
         variants={fadeUp}
         className={cn(
-          "text-3xl md:text-4xl font-bold leading-tight",
+          "text-3xl md:text-4xl font-bold leading-tight tracking-tight",
           light ? "text-white" : "text-primary",
           titleClassName
         )}

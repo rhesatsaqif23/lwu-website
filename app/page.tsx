@@ -1,11 +1,12 @@
 import type { Metadata } from "next"
 import HeroSection from "@/components/home/HeroSection"
-import AboutSection from "@/components/home/AboutSection"
+import ClientLogos from "@/components/home/ClientLogos"
+import AboutSnippet from "@/components/home/AboutSnippet"
 import ProgramCategories from "@/components/home/ProgramCategories"
 import ProductGrid from "@/components/home/ProductGrid"
 import FeaturedProducts from "@/components/home/FeaturedProducts"
 import Testimonials from "@/components/home/Testimonials"
-import ContactSection from "@/components/home/ContactSection"
+import ContactSnippet from "@/components/home/ContactSnippet"
 
 export const metadata: Metadata = {
   title: "Learning With Us | Online English & Self-Development Courses",
@@ -17,12 +18,13 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <AboutSection />
+      <ClientLogos />
+      <AboutSnippet />
       <ProgramCategories />
       <ProductGrid />
       <FeaturedProducts />
       <Testimonials />
-      <ContactSection />
+      <ContactSnippet />
     </>
   )
 }
