@@ -19,25 +19,8 @@ const fadeUp: Variants = {
 export default function HeroSection() {
   return (
     <section className="relative w-full overflow-hidden bg-[#f6f9fe] min-h-[calc(100vh-80px)] lg:min-h-[calc(100vh-82px)] flex items-center">
-      {/* Background decoration */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute left-1/2 top-1/2 h-[952px] w-[1920px] -translate-x-1/2 -translate-y-1/2 opacity-50">
-          {heroContent.images.background.map((img, idx) => (
-            <Image
-              key={idx}
-              className="absolute left-0 max-w-none"
-              style={{ top: img.top, width: '100%', height: 'auto' }}
-              alt="Background decoration"
-              src={img.src}
-              width={1920}
-              height={952}
-              sizes="100vw"
-            />
-          ))}
-        </div>
-      </div>
 
-      <div className="relative mx-auto flex w-full max-w-[1440px] flex-col items-center justify-between gap-10 px-4 py-12 sm:px-6 md:gap-12 lg:px-8 xl:px-24 xl:flex-row lg:gap-16">
+      <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-center justify-between gap-10 px-4 py-12 sm:px-6 md:gap-12 lg:px-8 xl:px-24 xl:flex-row lg:gap-16">
         {/* Left: Text content */}
         <header className="flex w-full max-w-[623px] flex-col items-center text-center xl:items-start xl:text-left">
           <div className="flex w-full flex-col items-center xl:items-start gap-4">
@@ -119,6 +102,22 @@ export default function HeroSection() {
             priority
           />
         </motion.div>
+      </div>
+      {/* Background decoration - Moved to bottom and set to very low z-index */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden -z-10">
+        <div className="absolute left-1/2 top-1/2 h-[952px] w-[1920px] -translate-x-1/2 -translate-y-1/2 opacity-20">
+          {heroContent.images.background.map((img, idx) => (
+            <Image
+              key={idx}
+              className="absolute left-0 max-w-none"
+              style={{ top: img.top }}
+              alt=""
+              src={img.src}
+              fill
+              priority={idx === 0}
+            />
+          ))}
+        </div>
       </div>
     </section>
   )

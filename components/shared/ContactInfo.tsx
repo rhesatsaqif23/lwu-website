@@ -1,4 +1,11 @@
-import { MapPin, Phone, Mail, Instagram, Music2, Linkedin } from "lucide-react"
+import { MapPin, Mail } from "lucide-react"
+import { 
+  InstagramLogo, 
+  TikTokLogo, 
+  YoutubeLogo, 
+  WhatsappLogo, 
+  LinkedinLogo 
+} from "@/components/shared/SocialLogos"
 
 interface ContactInfoProps {
   light?: boolean
@@ -20,13 +27,19 @@ export default function ContactInfo({ light = false }: ContactInfoProps) {
         </div>
       </div>
 
-      {/* Phone */}
+      {/* WhatsApp */}
       <div className="flex items-start gap-3">
-        <Phone className={`w-5 h-5 mt-0.5 shrink-0 ${iconColor}`} />
+        <WhatsappLogo className={`w-5 h-5 mt-0.5 shrink-0 ${iconColor}`} />
         <div>
-          <p className={`font-semibold text-sm ${textStrong}`}>Phone</p>
-          <p className={`text-sm ${textBase}`}>+62 812-1234-5678 (Head Office)</p>
-          <p className={`text-sm ${textBase}`}>+62 821-9876-5432 (Branch)</p>
+          <p className={`font-semibold text-sm ${textStrong}`}>WhatsApp</p>
+          <a
+            href="https://wa.me/6285711359655"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`text-sm ${textBase} hover:text-secondary transition-colors`}
+          >
+            +62 857-1135-9655
+          </a>
         </div>
       </div>
 
@@ -36,17 +49,10 @@ export default function ContactInfo({ light = false }: ContactInfoProps) {
         <div>
           <p className={`font-semibold text-sm ${textStrong}`}>Email</p>
           <a
-            href="mailto:contact@learningwithus.com"
+            href="mailto:lwuid.info@gmail.com"
             className={`text-sm ${textBase} hover:text-secondary transition-colors`}
           >
-            contact@learningwithus.com
-          </a>
-          <br />
-          <a
-            href="mailto:support@learningwithus.com"
-            className={`text-sm ${textBase} hover:text-secondary transition-colors`}
-          >
-            support@learningwithus.com
+            lwuid.info@gmail.com
           </a>
         </div>
       </div>
@@ -60,7 +66,7 @@ export default function ContactInfo({ light = false }: ContactInfoProps) {
           aria-label="Instagram"
           className={`${iconColor} hover:text-secondary-dark transition-colors`}
         >
-          <Instagram className="w-5 h-5" />
+          <InstagramLogo className="w-5 h-5" />
         </a>
         <a
           href="https://tiktok.com/@lwu_id"
@@ -69,16 +75,34 @@ export default function ContactInfo({ light = false }: ContactInfoProps) {
           aria-label="TikTok"
           className={`${iconColor} hover:text-secondary-dark transition-colors`}
         >
-          <Music2 className="w-5 h-5" />
+          <TikTokLogo className="w-5 h-5" />
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.youtube.com/@LearningWithUs-ID"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+          className={`${iconColor} hover:text-secondary-dark transition-colors`}
+        >
+          <YoutubeLogo className="w-5 h-5" />
+        </a>
+        <a
+          href="https://wa.me/6285711359655"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="WhatsApp"
+          className={`${iconColor} hover:text-secondary-dark transition-colors`}
+        >
+          <WhatsappLogo className="w-5 h-5" />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/learning-with-us-id"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
           className={`${iconColor} hover:text-secondary-dark transition-colors`}
         >
-          <Linkedin className="w-5 h-5" />
+          <LinkedinLogo className="w-5 h-5" />
         </a>
       </div>
     </div>

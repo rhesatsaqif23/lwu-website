@@ -4,7 +4,6 @@ import KeyStats from "@/components/about/KeyStats"
 import AboutStory from "@/components/about/AboutStory"
 import ProgramCategories from "@/components/home/ProgramCategories"
 import TeamSection from "@/components/about/TeamSection"
-import BlogPreviews from "@/components/about/BlogPreviews"
 import ContactBlock from "@/components/about/ContactBlock"
 
 export const metadata: Metadata = {
@@ -21,7 +20,6 @@ export default function AboutPage() {
       <AboutStory />
       <ProgramCategories />
       <TeamSection />
-      <BlogPreviews />
       <ContactBlock />
     </main>
   )

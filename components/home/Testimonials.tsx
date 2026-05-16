@@ -16,7 +16,7 @@ export default function Testimonials() {
   return (
     <section className="relative w-full overflow-hidden px-4 py-24 md:px-10 xl:px-24">
       {/* Background Vectors */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden z-0">
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="relative h-[860.63px] w-[1976.57px] bg-[url(/figmaAssets/vector-5.svg)] bg-position-[100%_100%]">
             {[
@@ -45,7 +45,7 @@ export default function Testimonials() {
         <div className="absolute right-0 bottom-[38px] h-[45px] w-[45px] rounded-full bg-secondary" />
       </div>
 
-      <div className="relative mx-auto w-full max-w-[1440px] flex flex-col items-center gap-[70px]">
+      <div className="relative z-10 mx-auto w-full max-w-[1440px] flex flex-col items-center gap-[70px]">
         <SectionHeading
           label="Testimonial"
           title="Real Results From Real Students"
