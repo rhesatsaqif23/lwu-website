@@ -33,6 +33,7 @@ export default function ContactInfoBlock() {
         <div className="flex flex-col gap-1 text-sm text-muted">
           <span>Instagram: @lwu_id</span>
           <span>TikTok: @lwu_id</span>
+          <span>YouTube: @LearningWithUs-ID</span>
           <span>LinkedIn: Learning With Us</span>
         </div>
       </div>

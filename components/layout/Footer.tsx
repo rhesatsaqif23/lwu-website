@@ -4,31 +4,39 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { 
+  InstagramLogo, 
+  TikTokLogo, 
+  YoutubeLogo, 
+  WhatsappLogo, 
+  LinkedinLogo 
+} from "@/components/shared/SocialLogos"
 
 const socialLinks = [
   {
     label: "Instagram",
     href: "https://instagram.com/lwu_id",
-    icon: "/figmaAssets/ri-instagram-fill.svg",
-    size: 25,
-  },
-  {
-    label: "Facebook",
-    href: "#",
-    icon: "/figmaAssets/vector-6.svg",
-    size: 10,
-  },
-  {
-    label: "YouTube",
-    href: "#",
-    icon: "/figmaAssets/vector-12.svg",
-    size: 21,
+    icon: InstagramLogo,
   },
   {
     label: "TikTok",
     href: "https://tiktok.com/@lwu_id",
-    icon: "/figmaAssets/ic-baseline-tiktok.svg",
-    size: 25,
+    icon: TikTokLogo,
+  },
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/@LearningWithUs-ID",
+    icon: YoutubeLogo,
+  },
+  {
+    label: "WhatsApp",
+    href: "https://wa.me/6285711359655",
+    icon: WhatsappLogo,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/learning-with-us-id",
+    icon: LinkedinLogo,
   },
 ]
 
@@ -72,7 +80,7 @@ function FooterBrandSection() {
           </p>
         </div>
         <nav aria-label="Social media" className="w-full">
-          <ul className="flex items-center gap-7">
+          <ul className="flex items-center gap-6">
             {socialLinks.map((item) => (
               <li key={item.label} className="flex items-center">
                 <a
@@ -80,16 +88,9 @@ function FooterBrandSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={item.label}
-                  className="inline-flex items-center justify-center transition-opacity hover:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                  className="text-primary transition-colors hover:text-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                 >
-                  <Image
-                    className="object-contain"
-                    alt={item.label}
-                    src={item.icon}
-                    width={item.size}
-                    height={25}
-                    style={{ width: `${item.size}px`, height: 'auto' }}
-                  />
+                  <item.icon className="w-6 h-6" />
                 </a>
               </li>
             ))}

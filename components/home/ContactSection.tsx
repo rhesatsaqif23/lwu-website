@@ -72,7 +72,7 @@ export default function ContactSection() {
                   </h3>
                   <div className="h-0.5 w-10 bg-primary/20" />
                   <div className="text-base text-slate-500 leading-relaxed">
-                    {item.title === "Phone" ? (
+                    {item.title === "WhatsApp" ? (
                       <div className="flex flex-col gap-0.5">
                         {(item.content as ContactContentItem[]).map((c, i) => (
                           <p key={i} className="whitespace-nowrap">
@@ -85,7 +85,7 @@ export default function ContactSection() {
                         {(item.content as ContactContentItem[]).map((c, i) => (
                           <p key={i}>
                             <a href={`mailto:${c.value}`} className="hover:underline">
-                              {c.label}<span className="underline">@learningwithus.com</span>
+                              {c.value}
                             </a>
                           </p>
                         ))}

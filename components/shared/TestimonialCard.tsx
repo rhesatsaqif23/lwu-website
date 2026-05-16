@@ -4,6 +4,7 @@ import { motion, Variants } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Image from "next/image"
+import { cn } from "@/lib/utils"
 import type { Testimonial } from "@/types"
 
 interface TestimonialCardProps extends Testimonial {
@@ -25,10 +26,10 @@ export default function TestimonialCard({
   return (
     <motion.div
       variants={fadeUp}
-      className={className}
+      className={cn("h-full flex flex-col", className)}
     >
-      <Card className="w-full rounded-[10px] border-0 bg-white shadow-none mt-[60px]">
-        <CardContent className="relative flex flex-col items-center px-6 pb-[50px] pt-[95px] sm:px-[60px]">
+      <Card className="w-full flex-1 rounded-[10px] border-0 bg-white shadow-none mt-[60px]">
+        <CardContent className="relative flex h-full flex-col items-center px-6 pb-[50px] pt-[95px] sm:px-[60px]">
           {/* Overlapping Avatar */}
           <div className="absolute left-1/2 top-[-60px] -translate-x-1/2">
             <Avatar className="h-[120px] w-[120px] rounded-full border-[6px] border-white shadow-md">
