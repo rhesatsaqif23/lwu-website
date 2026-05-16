@@ -24,8 +24,8 @@ export default function ContactSection() {
   return (
     <div className="w-full font-sans">
       {/* 1. Contact Info Cards Section */}
-      <section className="w-full px-4 pt-24 pb-12 md:px-10 lg:px-24">
-        <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center gap-16">
+      <section className="w-full px-4 pt-12 md:pt-16 md:px-10 lg:px-24">
+        <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center gap-8 md:gap-12">
           {/* Section Heading */}
           <motion.div 
             initial="hidden"
@@ -102,7 +102,7 @@ export default function ContactSection() {
       </section>
 
       {/* 2. Contact Form Section */}
-      <section className="relative w-full overflow-hidden bg-white">
+      <section className="relative w-full overflow-hidden bg-white py-12 md:py-16">
         <div className="mx-auto flex w-full max-w-[1440px] flex-col items-stretch lg:flex-row lg:items-center px-4 md:px-10 lg:px-24">
           {/* Image Side */}
           <div className="w-full lg:flex-1 relative min-h-[350px] sm:min-h-[450px] lg:min-h-[600px]">
@@ -121,7 +121,7 @@ export default function ContactSection() {
             whileInView="visible"
             viewport={{ once: true, margin: "-200px" }}
             variants={fadeUp}
-            className="w-full lg:flex-1 py-6 lg:py-12 lg:pl-12"
+            className="w-full lg:flex-1 lg:pl-12"
           >
             <Card className="rounded-xl border border-slate-100 bg-white shadow-2xl max-w-[580px] mx-auto lg:mx-0">
               <CardContent className="flex flex-col gap-8 p-6 sm:p-10">
@@ -160,7 +160,7 @@ export default function ContactSection() {
                   <div className="md:col-span-1 pt-2">
                     <Button
                       type="submit"
-                      className="h-auto rounded-lg bg-primary px-10 py-3.5 text-sm font-bold text-white hover:bg-primary-dark transition-all shadow-lg active:scale-95"
+                      className="h-auto rounded-lg bg-primary px-10 py-3.5 text-sm font-semibold text-white hover:bg-primary-dark transition-all shadow-lg active:scale-95"
                     >
                       SUBMIT
                     </Button>

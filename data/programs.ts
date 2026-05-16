@@ -9,7 +9,7 @@ export const programsData = {
       title: "General English",
       description:
         "Build everyday English skills for communication, reading, writing, and speaking at any level.",
-      href: "/products",
+      href: "/services",
       images: [
         {
           alt: "Clip path group",
@@ -28,7 +28,7 @@ export const programsData = {
       title: "IELTS Preparation",
       description:
         "Targeted preparation to help you achieve your IELTS target score for study or career abroad.",
-      href: "/products",
+      href: "/services",
       images: [
         {
           src: "/figmaAssets/clip-path-group-2.png",
@@ -47,7 +47,7 @@ export const programsData = {
       title: "Business English",
       description:
         "Professional English for workplace communication, presentations, emails, and negotiations.",
-      href: "/products",
+      href: "/services",
       images: [
         {
           src: "/figmaAssets/clip-path-group-3.png",
@@ -66,7 +66,7 @@ export const programsData = {
       title: "Self-Development",
       description:
         "Courses on leadership, emotional intelligence, negotiation, and personal effectiveness.",
-      href: "/products",
+      href: "/services",
       images: [
         {
           src: "/figmaAssets/clip-path-group-4.png",

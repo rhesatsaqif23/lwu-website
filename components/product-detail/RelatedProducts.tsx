@@ -15,16 +15,31 @@ const stagger: Variants = {
 }
 
 export default function RelatedProducts({ currentSlug }: RelatedProductsProps) {
-  const related = products.filter((p) => p.slug !== currentSlug).slice(0, 3)
+  const currentProduct = products.find((p) => p.slug === currentSlug)
+  
+  const related = products
+    .filter((p) => p.slug !== currentSlug)
+    .map((p) => {
+      if (!currentProduct) return { product: p, score: 0 }
+      
+      const currentWords = currentProduct.title.toLowerCase().split(/\W+/).filter(w => w.length > 2)
+      const pWords = p.title.toLowerCase().split(/\W+/).filter(w => w.length > 2)
+      
+      const score = pWords.filter(w => currentWords.includes(w)).length
+      return { product: p, score }
+    })
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3)
+    .map((item) => item.product)
 
   return (
-    <section className="section-padding bg-surface">
-      <div className="container-lg">
+    <section className="py-8 md:py-12 bg-surface">
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24">
         <SectionHeading
           label="Related Products"
           title="You Might Also Like"
           align="center"
-          className="mb-12"
+          className="mb-8 md:mb-10"
         />
         <motion.div
           variants={stagger}

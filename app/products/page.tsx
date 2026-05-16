@@ -1,8 +1,5 @@
 import type { Metadata } from "next"
-import ProductsHero from "@/components/products/ProductsHero"
-import ProductFilter from "@/components/products/ProductFilter"
-import FeaturedSection from "@/components/products/FeaturedSection"
-import ServicesSection from "@/components/products/ServicesSection"
+import ProductsPageContent from "@/components/products/ProductsPageContent"
 
 export const metadata: Metadata = {
   title: "Products & Services | Learning With Us",
@@ -11,12 +8,5 @@ export const metadata: Metadata = {
 }
 
 export default function ProductsPage() {
-  return (
-    <>
-      <ProductsHero />
-      <ProductFilter />
-      <FeaturedSection />
-      <ServicesSection />
-    </>
-  )
+  return <ProductsPageContent />
 }

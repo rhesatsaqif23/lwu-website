@@ -14,11 +14,11 @@ const stagger: Variants = {
 
 export default function Testimonials() {
   return (
-    <section className="relative w-full overflow-hidden px-4 py-24 md:px-10 xl:px-24">
+    <section className="relative w-full overflow-hidden px-4 py-12 md:py-16 md:px-10 xl:px-24">
       {/* Background Vectors */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden z-0">
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="relative h-[860.63px] w-[1976.57px] bg-[url(/figmaAssets/vector-5.svg)] bg-position-[100%_100%]">
+          <div className="relative h-[860.63px] w-[1976.57px] bg-[url(/figmaAssets/bg-hero-accent-1.svg)] bg-position-[100%_100%]">
             {[
               "left-[6.07%]",
               "left-[28.67%]",
@@ -31,7 +31,7 @@ export default function Testimonials() {
                 key={`vector-line-${index}`}
                 className={cn("absolute top-0", leftClass)}
                 alt=""
-                src="/figmaAssets/vector-2.svg"
+                src="/figmaAssets/bg-line-vertical.svg"
                 width={1}
                 height={1000}
                 style={{ height: '100%', width: 'auto' }}
@@ -45,7 +45,7 @@ export default function Testimonials() {
         <div className="absolute right-0 bottom-[38px] h-[45px] w-[45px] rounded-full bg-secondary" />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-[1440px] flex flex-col items-center gap-[70px]">
+      <div className="relative z-10 mx-auto w-full max-w-[1440px] flex flex-col items-center gap-12 md:gap-[70px]">
         <SectionHeading
           label="Testimonial"
           title="Real Results From Real Students"

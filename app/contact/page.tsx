@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
-import ContactHero from "@/components/contact/ContactHero"
-import ContactInfoBlock from "@/components/contact/ContactInfoBlock"
-import ContactForm from "@/components/contact/ContactForm"
+import Breadcrumb from "@/components/shared/Breadcrumb"
+import ContactContent from "@/components/contact/ContactContent"
 
 export const metadata: Metadata = {
   title: "Contact Us | Learning With Us",
@@ -11,17 +10,20 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <>
-      <ContactHero />
-
-      <section className="section-padding bg-surface">
+    <main>
+      <section className="bg-[#F5F9FF] py-8">
         <div className="container-lg">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <ContactInfoBlock />
-            <ContactForm />
-          </div>
+          <Breadcrumb
+            items={[{ label: "Contact Us" }]}
+            centered
+            separator="//"
+            uppercase
+            hideHomeIcon
+          />
         </div>
       </section>
-    </>
+
+      <ContactContent />
+    </main>
   )
 }

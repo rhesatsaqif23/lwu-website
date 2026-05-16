@@ -12,13 +12,13 @@ const stagger: Variants = {
 
 export default function ProductGrid() {
   return (
-    <section className="py-20 md:py-[100px] bg-white">
+    <section className="py-12 md:py-16 bg-white">
       <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24">
         <SectionHeading
           label="Our Products"
           title="Featured Products"
           align="center"
-          className="mb-12 md:mb-[70px]"
+          className="mb-4 md:mb-8"
         />
 
         <motion.div

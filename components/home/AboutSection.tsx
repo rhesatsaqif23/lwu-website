@@ -66,7 +66,7 @@ const AboutDescriptionSection = () => {
                     {item.title}
                   </h3>
                 </header>
-                <p className="-mt-px self-stretch text-sm font-normal leading-[21px] text-slate-700 font-sans">
+                <p className="-mt-px self-stretch text-xs md:text-sm font-normal leading-relaxed text-slate-700 font-sans">
                   {item.description}
                 </p>
               </CardContent>
@@ -80,7 +80,7 @@ const AboutDescriptionSection = () => {
 
 export default function AboutSection() {
   return (
-    <section className="w-full py-16 xl:py-[120px] bg-white overflow-hidden">
+    <section className="w-full py-12 md:py-16 bg-white overflow-hidden">
       <motion.div 
         initial="hidden"
         whileInView="visible"
@@ -96,8 +96,8 @@ export default function AboutSection() {
               asChild
               className="h-auto rounded-[5px] border border-solid border-primary bg-primary px-6 py-3 md:px-8 md:py-[15px] text-white hover:bg-primary/90 transition-colors"
             >
-              <Link href="/about" className="font-sans text-sm md:text-base font-bold leading-[1.2] md:leading-[29.6px] tracking-wide">
-                EXPLORE COURSES
+              <Link href="/products" className="font-sans text-sm md:text-base font-bold leading-[1.2] md:leading-[29.6px] tracking-wide">
+                EXPLORE PRODUCTS
               </Link>
             </Button>
           </motion.div>
@@ -109,7 +109,7 @@ export default function AboutSection() {
         >
           <div className="relative min-h-[300px] sm:min-h-[420px] w-full xl:h-[706px]">
             <Image
-              src="/figmaAssets/about-image.png"
+              src="/figmaAssets/about-hero.png"
               alt="About Learning With Us"
               fill
               className="object-contain object-center"

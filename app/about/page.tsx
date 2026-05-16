@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
-import AboutHero from "@/components/about/AboutHero"
+import Breadcrumb from "@/components/shared/Breadcrumb"
 import KeyStats from "@/components/about/KeyStats"
-import AboutStory from "@/components/about/AboutStory"
 import ProgramCategories from "@/components/home/ProgramCategories"
 import TeamSection from "@/components/about/TeamSection"
-import ContactBlock from "@/components/about/ContactBlock"
+import AboutSection from "@/components/home/AboutSection"
+import WhatWeOffer from "@/components/about/WhatWeOffer"
 
 export const metadata: Metadata = {
   title: "About Us | Learning With Us",
@@ -15,12 +15,22 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main>
-      <AboutHero />
+      <section className="bg-[#F5F9FF] py-8">
+        <div className="container-lg">
+          <Breadcrumb
+            items={[{ label: "About Us" }]}
+            centered
+            separator="//"
+            uppercase
+            hideHomeIcon
+          />
+        </div>
+      </section>
+      <AboutSection />
       <KeyStats />
-      <AboutStory />
+      <WhatWeOffer />
       <ProgramCategories />
       <TeamSection />
-      <ContactBlock />
     </main>
   )
 }

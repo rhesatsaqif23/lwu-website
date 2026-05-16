@@ -12,6 +12,8 @@ import {
   LinkedinLogo 
 } from "@/components/shared/SocialLogos"
 
+import { navLinks } from "@/data/navigation"
+
 const socialLinks = [
   {
     label: "Instagram",
@@ -40,13 +42,6 @@ const socialLinks = [
   },
 ]
 
-const footerLinks = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Products & Services", href: "/products" },
-  { label: "Contact", href: "/contact" },
-]
-
 const categoryLinks = [
   "General English",
   "IELTS",
@@ -63,7 +58,7 @@ function FooterBrandSection() {
             className="object-cover"
             style={{ width: '48px', height: 'auto' }}
             alt="Learning With Us Logo"
-            src="/figmaAssets/cropped-circle-image-1-1.png"
+            src="/figmaAssets/lwu-logo.png"
             width={50}
             height={50}
           />
@@ -109,7 +104,7 @@ function FooterNavColumnSection() {
       </h2>
       <nav aria-label="Footer pages">
         <ul className="flex flex-col gap-4">
-          {footerLinks.map((link) => (
+          {navLinks.map((link) => (
             <li key={link.label}>
               <Link
                 href={link.href}
@@ -162,11 +157,11 @@ function FooterLinksColumnSection() {
         <Input
           type="email"
           placeholder="Your Email Address"
-          className="h-14 w-full rounded-lg border-transparent bg-white shadow-sm px-6 text-sm text-primary placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-primary"
+          className="h-12 w-full rounded-lg border-transparent bg-white shadow-sm px-6 text-sm text-primary placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-primary"
         />
         <Button
           type="submit"
-          className="h-auto min-h-[45px] min-w-[145px] rounded-lg bg-primary px-8 py-3.5 text-base font-bold text-white hover:bg-primary-dark transition-all"
+          className="h-auto min-h-[45px] min-w-[145px] rounded-lg bg-primary px-8 py-3.5 text-base font-semibold text-white hover:bg-primary-dark transition-all"
         >
           SUBSCRIBE
         </Button>
@@ -177,7 +172,7 @@ function FooterLinksColumnSection() {
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#f6f9fe] px-4 pt-24 pb-10 md:px-10 lg:pt-32 xl:px-24">
+    <footer className="w-full bg-[#f6f9fe] px-4 md:px-10 xl:px-24 py-8 md:py-12 ">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-16 lg:flex-row lg:justify-between lg:gap-12">
           <FooterBrandSection />
@@ -190,7 +185,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright bar */}
-        <div className="mt-20 pt-8 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-8 md:mt-12 pt-8 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm">
             &copy; {new Date().getFullYear()} Learning With Us. All rights reserved.
           </p>
