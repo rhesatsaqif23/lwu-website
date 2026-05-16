@@ -34,7 +34,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
   return (
     <main className="bg-[#fdfdfd] min-h-screen">
       <section className="bg-[#F5F9FF] py-8 mb-12">
-        <div className="container-lg">
+        <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24">
           <Breadcrumb
             items={[
               { label: "Products & Services", href: "/products" },
@@ -48,7 +48,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
         </div>
       </section>
 
-      <div className="container-lg pb-8 md:pb-12">
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24 pb-8 md:pb-12">
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
           {/* Main Content — 2/3 width */}

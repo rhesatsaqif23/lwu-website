@@ -1,9 +1,11 @@
+import { ContactInfoItem, ContactField } from "@/types";
+
 export const contactHeading = {
   eyebrow: "Contact Us",
   title: "Connect with us. We are here to help you start your journey.",
 };
 
-export const contactInfo = [
+export const contactInfo: ContactInfoItem[] = [
   {
     icon: "/figmaAssets/component-1-15.svg",
     title: "Address",
@@ -13,7 +15,7 @@ export const contactInfo = [
     icon: "/figmaAssets/whatsapp-official.svg",
     title: "WhatsApp",
     content: [
-      { label: "Official", value: "+62 857-1135-9655" },
+      { label: "WhatsApp", value: "+62 857-1135-9655" },
     ],
   },
   {
@@ -25,24 +27,30 @@ export const contactInfo = [
   },
 ];
 
-export const contactFields = [
+export const contactFields: ContactField[] = [
   {
-    id: "first-name",
-    label: "First Name *",
-    type: "input" as const,
-    gridCols: "md:col-span-1",
-  },
-  {
-    id: "last-name",
-    label: "Last Name",
+    id: "name",
+    label: "Your Name",
     type: "input" as const,
     gridCols: "md:col-span-1",
   },
   {
     id: "email",
-    label: "E-mail *",
+    label: "E-mail",
     type: "input" as const,
-    gridCols: "md:col-span-2",
+    gridCols: "md:col-span-1",
+  },
+  {
+    id: "phone",
+    label: "Phone Number",
+    type: "input" as const,
+    gridCols: "md:col-span-1",
+  },
+  {
+    id: "subject",
+    label: "Subject",
+    type: "input" as const,
+    gridCols: "md:col-span-1",
   },
   {
     id: "message",

@@ -83,6 +83,19 @@ export interface Service {
 
 // ─── Contact Types ────────────────────────────────────────────────────────────
 
+export interface ContactInfoItem {
+  icon: string;
+  title: string;
+  content: (string | { label: string; value: string })[];
+}
+
+export interface ContactField {
+  id: string;
+  label: string;
+  type: "input" | "textarea";
+  gridCols: string;
+}
+
 export interface ContactInfo {
   address: string;
   phoneHeadOffice: string;

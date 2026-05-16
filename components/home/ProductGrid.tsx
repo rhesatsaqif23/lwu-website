@@ -18,7 +18,7 @@ export default function ProductGrid() {
           label="Our Products"
           title="Featured Products"
           align="center"
-          className="mb-12 md:mb-[70px]"
+          className="mb-4 md:mb-8"
         />
 
         <motion.div

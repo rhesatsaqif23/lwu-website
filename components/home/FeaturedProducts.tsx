@@ -18,7 +18,7 @@ export default function FeaturedProducts() {
           label="Top Picks"
           title="Featured Products"
           align="center"
-          className="mb-12"
+          className="mb-4 md:mb-8"
         />
 
         <motion.div

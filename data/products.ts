@@ -71,7 +71,7 @@ export const products: Product[] = [
     stats: [
       { label: "Chapters", value: "12", icon: "book" },
       { label: "Pages", value: "54", icon: "file-text" },
-      { label: "Language", value: "Indonesian", icon: "globe" },
+      { label: "Language", value: "English, Indonesian", icon: "globe" },
       { label: "Format", value: "PDF", icon: "file-check" },
     ],
   },
@@ -146,7 +146,7 @@ export const products: Product[] = [
     stats: [
       { label: "Chapters", value: "8", icon: "book" },
       { label: "Pages", value: "90", icon: "file-text" },
-      { label: "Language", value: "Indonesian", icon: "globe" },
+      { label: "Language", value: "English, Indonesian", icon: "globe" },
       { label: "Format", value: "PDF", icon: "file-check" },
     ],
   },
