@@ -1,4 +1,4 @@
-import type { Product } from "@/types"
+import type { Product } from "@/types";
 
 export const products: Product[] = [
   {
@@ -8,23 +8,34 @@ export const products: Product[] = [
     type: "Ebook",
     badge: "BEST SELLER",
     rating: 5.0,
+    reviews: 142,
+    author: "LWU Team",
     price: "$4.99",
     image: "https://public-files.gumroad.com/hb5csmjzrbc8q93bu17ywvd5te1f",
     ctaLink: "https://learningwithus.gumroad.com/l/jndcs",
     buyIcon: "/figmaAssets/component-1-2.svg",
     meta: [
-      {
-        icon: "/figmaAssets/component-1-8.svg",
-        text: "400 entries",
-      },
-      {
-        icon: "/figmaAssets/component-1.svg",
-        text: "Ebook",
-      },
-      {
-        iconBg: "bg-[url(/figmaAssets/vector-9.svg)]",
-        text: "5.0",
-      },
+      { icon: "/figmaAssets/component-1-8.svg", text: "400 entries" },
+      { icon: "/figmaAssets/component-1.svg", text: "Ebook" },
+      { iconBg: "bg-[url(/figmaAssets/vector-9.svg)]", text: "5.0" },
+    ],
+    intro:
+      "This comprehensive ebook breaks down 400 essential differences between British and American English. Do you say 'lift' or 'elevator'? 'Holiday' or 'vacation'? If you've ever been confused by British and American English, you're not alone. This book makes everything clear, simple, and surprisingly fun to learn.",
+    description:
+      "Covers everyday vocabulary for home, food, travel, and work, alongside common expressions and phrases. It includes practical examples you can use instantly and side by side comparisons for easy learning. All explanations are simple and clear and avoid any complicated grammar terms. Whether you're traveling, studying, working, or just improving your English, this guide gives you the tools to understand and use both versions naturally. Instead of long or boring lessons, you get direct and concise differences that you can apply immediately in real conversations.",
+    benefits: [
+      "400 must-know differences in one place",
+      "Clear, simple explanations (no complicated grammar)",
+      "Real-life words you'll actually use",
+      "Quick to read, easy to remember",
+      "Perfect for beginners and intermediate learners",
+      "Lifetime access with a single download to keep forever",
+    ],
+    stats: [
+      { label: "Chapters", value: "12", icon: "book" },
+      { label: "Pages", value: "54", icon: "file-text" },
+      { label: "Language", value: "English", icon: "globe" },
+      { label: "Format", value: "PDF", icon: "file-check" },
     ],
   },
   {
@@ -34,23 +45,34 @@ export const products: Product[] = [
     type: "Ebook",
     badge: "BEST SELLER",
     rating: 5.0,
+    reviews: 89,
+    author: "LWU Team",
     price: "IDR 49,900",
     image: "https://public-files.gumroad.com/p7woxf98f3d5vgygv970c05n8fud",
     ctaLink: "https://lynk.id/lwu_id/og12k230ywx9/checkout",
     buyIcon: "/figmaAssets/component-1-2.svg",
     meta: [
-      {
-        icon: "/figmaAssets/component-1-8.svg",
-        text: "400 entries",
-      },
-      {
-        icon: "/figmaAssets/component-1.svg",
-        text: "Ebook",
-      },
-      {
-        iconBg: "bg-[url(/figmaAssets/vector-9.svg)]",
-        text: "5.0",
-      },
+      { icon: "/figmaAssets/component-1-8.svg", text: "400 entries" },
+      { icon: "/figmaAssets/component-1.svg", text: "Ebook" },
+      { iconBg: "bg-[url(/figmaAssets/vector-9.svg)]", text: "5.0" },
+    ],
+    intro:
+      "Ebook yang membahas 400 perbedaan penting antara British dan American English. Apakah Anda mengatakan 'lift' atau 'elevator'? 'Holiday' atau 'vacation'? Jika Anda pernah bingung dengan perbedaan ini, Anda tidak sendirian. Buku ini membuat semuanya jelas, sederhana, dan mengejutkan menyenangkan untuk dipelajari.",
+    description:
+      "Mencakup kosakata sehari-hari (rumah, makanan, perjalanan, pekerjaan), ekspresi dan frasa umum, contoh praktis yang dapat Anda gunakan langsung, dan perbandingan berdampingan untuk pembelajaran yang mudah. Semua penjelasan sederhana dan jelas, tanpa istilah tata bahasa yang rumit. Baik Anda bepergian, belajar, bekerja, atau hanya meningkatkan bahasa Inggris Anda, panduan ini memberi Anda alat untuk memahami dan menggunakan kedua versi secara alami.",
+    benefits: [
+      "400 perbedaan yang harus diketahui dalam satu tempat",
+      "Penjelasan sederhana tanpa tata bahasa rumit",
+      "Kata-kata kehidupan nyata yang akan Anda gunakan",
+      "Cepat dibaca, mudah diingat",
+      "Sempurna untuk pemula dan pelajar tingkat menengah",
+      "Akses seumur hidup dengan sekali unduh untuk disimpan selamanya",
+    ],
+    stats: [
+      { label: "Chapters", value: "12", icon: "book" },
+      { label: "Pages", value: "54", icon: "file-text" },
+      { label: "Language", value: "Indonesian", icon: "globe" },
+      { label: "Format", value: "PDF", icon: "file-check" },
     ],
   },
   {
@@ -60,23 +82,34 @@ export const products: Product[] = [
     type: "Ebook",
     badge: "NEW",
     rating: 4.8,
+    reviews: 56,
+    author: "LWU Team",
     price: "$15.00",
     image: "https://public-files.gumroad.com/cccdsec7mtt4uw8w5wc46zhanrm1",
     ctaLink: "https://learningwithus.gumroad.com/l/sfryhb",
     buyIcon: "/figmaAssets/component-1-3.svg",
     meta: [
-      {
-        icon: "/figmaAssets/component-1-8.svg",
-        text: "90 pages",
-      },
-      {
-        icon: "/figmaAssets/component-1.svg",
-        text: "Ebook",
-      },
-      {
-        iconBg: "bg-[url(/figmaAssets/vector-9.svg)]",
-        text: "4.8",
-      },
+      { icon: "/figmaAssets/component-1-8.svg", text: "90 pages" },
+      { icon: "/figmaAssets/component-1.svg", text: "Ebook" },
+      { iconBg: "bg-[url(/figmaAssets/vector-9.svg)]", text: "4.8" },
+    ],
+    intro:
+      "Learn English grammar through an engaging comic story. No headaches. No complications. Through comics. If you feel like grammar is always confusing, this ebook was created for one simple purpose: To help you finally understand basic English grammar. Even if you feel like you're starting from scratch.",
+    description:
+      "This ebook takes a different approach. No more reading long theories as you learn through simple comics, everyday conversations, and easy to understand examples. You don't just read grammar rules, you see how grammar is used in real contexts. After reading this ebook, you will begin to be able to: understand the basics of English grammar, create simple correct sentences, differentiate basic tenses without confusion, and understand frequently used sentence patterns. Everything is explained step by step from scratch.",
+    benefits: [
+      "Visual learning through engaging comic format",
+      "Simple approach to understanding grammar",
+      "Everyday conversations and real contexts",
+      "Step by step explanation from scratch",
+      "No complicated rules or confusing terms",
+      "Perfect for beginners and visual learners",
+    ],
+    stats: [
+      { label: "Chapters", value: "8", icon: "book" },
+      { label: "Pages", value: "90", icon: "file-text" },
+      { label: "Language", value: "English", icon: "globe" },
+      { label: "Format", value: "PDF", icon: "file-check" },
     ],
   },
   {
@@ -86,49 +119,73 @@ export const products: Product[] = [
     type: "Ebook",
     badge: "POPULAR",
     rating: 4.8,
+    reviews: 112,
+    author: "LWU Team",
     price: "IDR 99,900",
-    image: "https://cdn.lynkid.my.id/products/19-03-2026/1773907276391_5776139.webp",
+    image:
+      "https://cdn.lynkid.my.id/products/19-03-2026/1773907276391_5776139.webp",
     ctaLink: "https://lynk.id/lwu_id/zr422x33rng7",
     buyIcon: "/figmaAssets/component-1-2.svg",
     meta: [
-      {
-        icon: "/figmaAssets/component-1-8.svg",
-        text: "Comic + Translation",
-      },
-      {
-        icon: "/figmaAssets/component-1.svg",
-        text: "Ebook",
-      },
-      {
-        iconBg: "bg-[url(/figmaAssets/vector-9.svg)]",
-        text: "4.8",
-      },
+      { icon: "/figmaAssets/component-1-8.svg", text: "Comic + Translation" },
+      { icon: "/figmaAssets/component-1.svg", text: "Ebook" },
+      { iconBg: "bg-[url(/figmaAssets/vector-9.svg)]", text: "4.8" },
+    ],
+    intro:
+      "Pelajari tata bahasa Inggris melalui cerita komik yang menarik dalam bahasa Inggris dan Indonesia. Tanpa pusing. Tanpa rumit. Lewat komik. Ebook ini dibuat untuk satu tujuan sederhana: Membantu Anda akhirnya mengerti tata bahasa dasar bahasa Inggris, bahkan jika Anda merasa memulai dari nol.",
+    description:
+      "Ebook ini menggunakan pendekatan yang berbeda. Tidak perlu lagi membaca teori panjang, Anda belajar melalui komik sederhana, percakapan sehari-hari, dan contoh yang mudah dipahami. Anda tidak hanya membaca aturan tata bahasa, Anda melihat bagaimana tata bahasa digunakan dalam konteks nyata. Setelah membaca ebook ini, Anda akan mulai bisa: memahami dasar tata bahasa Inggris, membuat kalimat sederhana yang benar, membedakan tenses dasar tanpa kebingungan, dan memahami pola kalimat yang sering dipakai.",
+    benefits: [
+      "Belajar melalui komik yang menarik dan visual",
+      "Dukungan bilingual (Inggris + Terjemahan Indonesia)",
+      "Percakapan sehari-hari dan contoh nyata",
+      "Cocok untuk pemula yang tidak tahu tata bahasa sama sekali",
+      "Membedakan tenses dasar tanpa kebingungan",
+      "Unduh instan dan mulai belajar sekarang",
+    ],
+    stats: [
+      { label: "Chapters", value: "8", icon: "book" },
+      { label: "Pages", value: "90", icon: "file-text" },
+      { label: "Language", value: "Indonesian", icon: "globe" },
+      { label: "Format", value: "PDF", icon: "file-check" },
     ],
   },
   {
     id: "grammar-comic-english-only",
     slug: "grammar-comic-english-only",
-    title: "Comic - Only English (Indonesian Buyers)",
+    title: "Comic in English Only (Indonesian Buyers)",
     type: "Ebook",
     badge: "NEW",
     rating: 4.7,
+    reviews: 43,
+    author: "LWU Team",
     price: "IDR 99,900",
-    image: "https://cdn.lynkid.my.id/products/19-03-2026/1773907840656_8749596.webp",
+    image:
+      "https://cdn.lynkid.my.id/products/19-03-2026/1773907840656_8749596.webp",
     ctaLink: "https://lynk.id/lwu_id/n341k550575v",
     buyIcon: "/figmaAssets/component-1-2.svg",
     meta: [
-      {
-        icon: "/figmaAssets/component-1-8.svg",
-        text: "English Only",
-      },
-      {
-        icon: "/figmaAssets/component-1.svg",
-        text: "Ebook",
-      },
-      {
-        iconBg: "bg-[url(/figmaAssets/vector-9.svg)]",
-        text: "4.7",
-      },
+      { icon: "/figmaAssets/component-1-8.svg", text: "English Only" },
+      { icon: "/figmaAssets/component-1.svg", text: "Ebook" },
+      { iconBg: "bg-[url(/figmaAssets/vector-9.svg)]", text: "4.7" },
+    ],
+    intro:
+      "The same engaging grammar comic in an English only version. This is ideal for learners who want full English immersion while learning grammar through a story. No headaches and no complications as you learn through comics.",
+    description:
+      "Uses simple comics and everyday conversations to teach grammar without dense theory. Covers tenses, sentence patterns, and common structures from the ground up. Designed for learners who want a visual and story driven approach to grammar. This comic tells the story of young adults who aim to explore better opportunities. However, in order to achieve great things in life, they need to learn English first. So they take an English course and focus on grammar to achieve their goals.",
+    benefits: [
+      "Full English immersion for maximum learning impact",
+      "Visual learning through engaging comic illustrations",
+      "Story based approach makes grammar memorable",
+      "Perfect for beginners starting from scratch",
+      "Covers fundamental tenses and sentence patterns",
+      "English only edition for complete immersion",
+    ],
+    stats: [
+      { label: "Chapters", value: "8", icon: "book" },
+      { label: "Pages", value: "90", icon: "file-text" },
+      { label: "Language", value: "English", icon: "globe" },
+      { label: "Format", value: "PDF", icon: "file-check" },
     ],
   },
   {
@@ -138,25 +195,37 @@ export const products: Product[] = [
     type: "Ebook",
     badge: "FEATURED",
     rating: 4.6,
+    reviews: 78,
+    author: "LWU Team",
     price: "IDR 99,000",
-    image: "https://cdn.lynkid.my.id/products/14-03-2026/1773486361272_8349449.webp",
+    image:
+      "https://cdn.lynkid.my.id/products/14-03-2026/1773486361272_8349449.webp",
     ctaLink: "https://lynk.id/lwu_id/e1zxxpgkvk9d",
     buyIcon: "/figmaAssets/component-1-2.svg",
     meta: [
-      {
-        icon: "/figmaAssets/component-1-8.svg",
-        text: "100+ scholarships",
-      },
-      {
-        icon: "/figmaAssets/component-1.svg",
-        text: "Ebook",
-      },
-      {
-        iconBg: "bg-[url(/figmaAssets/vector-9.svg)]",
-        text: "4.6",
-      },
+      { icon: "/figmaAssets/component-1-8.svg", text: "100+ scholarships" },
+      { icon: "/figmaAssets/component-1.svg", text: "Ebook" },
+      { iconBg: "bg-[url(/figmaAssets/vector-9.svg)]", text: "4.6" },
+    ],
+    intro:
+      "Stop opening dozens of websites to search for scholarships. This ebook compiles hundreds of scholarship opportunities from around the world in one practical guide. Temukan ratusan beasiswa dalam 1 ebook tanpa harus membuka puluhan website.",
+    description:
+      "Ebook ini merangkum berbagai peluang beasiswa dari berbagai negara lengkap dengan informasi penting yang Anda butuhkan untuk mulai mendaftar. Includes scholarship listings from multiple countries, detailed study level information (S1/S2/S3), funding type details (fully funded or partial), registration requirements, important deadlines, and official application links. Setiap tahun ada banyak beasiswa yang tersedia, tetapi tidak semua orang mengetahuinya. Dengan ebook ini, Anda bisa menemukan berbagai peluang tersebut dalam satu tempat yang praktis dan mudah dipahami.",
+    benefits: [
+      "Daftar beasiswa dari berbagai negara di seluruh dunia",
+      "Informasi jenjang studi lengkap (S1, S2, S3)",
+      "Detail pendanaan (fully funded atau partial)",
+      "Persyaratan pendaftaran yang jelas",
+      "Deadline penting untuk setiap beasiswa",
+      "Link resmi langsung ke situs pendaftaran",
+    ],
+    stats: [
+      { label: "Entries", value: "100+", icon: "book" },
+      { label: "Pages", value: "120", icon: "file-text" },
+      { label: "Language", value: "Indonesian", icon: "globe" },
+      { label: "Format", value: "PDF", icon: "file-check" },
     ],
   },
-]
+];
 
-export const featuredProducts = products
+export const featuredProducts = products;

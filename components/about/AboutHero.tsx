@@ -10,7 +10,7 @@ const fadeUp: Variants = {
 
 export default function AboutHero() {
   return (
-    <section className="bg-primary py-16 md:py-24 relative overflow-hidden">
+    <section className="bg-primary py-12 md:py-16 relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
       </div>
@@ -28,7 +28,7 @@ export default function AboutHero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-blue-200 text-lg max-w-2xl leading-relaxed"
+          className="text-blue-200 text-base md:text-lg max-w-2xl leading-relaxed"
         >
           Learning With Us (LWU) is an online English course platform founded in 2017, helping
           1,000+ students aged 7–62 across Indonesia and internationally achieve their English

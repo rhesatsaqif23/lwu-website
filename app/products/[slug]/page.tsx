@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { products } from "@/data/products"
-import { productDetails } from "@/data/productDetails"
-import ProductDetailHero from "@/components/product-detail/ProductDetailHero"
-import ProductTabs from "@/components/product-detail/ProductTabs"
+import ProductHeader from "@/components/product-detail/ProductHeader"
+import ProductOverview from "@/components/product-detail/ProductOverview"
 import ProductPriceBlock from "@/components/product-detail/ProductPriceBlock"
 import RelatedProducts from "@/components/product-detail/RelatedProducts"
+import Breadcrumb from "@/components/shared/Breadcrumb"
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -21,38 +21,50 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!product) return { title: "Product Not Found | Learning With Us" }
   return {
     title: `${product.title} | Learning With Us`,
-    description: productDetails.find((d) => d.slug === slug)?.intro ?? product.title,
+    description: product.intro,
   }
 }
 
 export default async function ProductDetailPage({ params }: PageProps) {
   const { slug } = await params
   const product = products.find((p) => p.slug === slug)
-  const detail = productDetails.find((d) => d.slug === slug)
 
-  if (!product || !detail) notFound()
+  if (!product) notFound()
 
   return (
-    <>
-      <ProductDetailHero product={product} />
-
-      {/* Main content + sticky sidebar */}
-      <section className="bg-white">
-        <div className="container-lg py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-            {/* Tabs — 2/3 width */}
-            <div className="lg:col-span-2">
-              <ProductTabs detail={detail} />
-            </div>
-            {/* Price block — 1/3 width */}
-            <div className="lg:col-span-1">
-              <ProductPriceBlock product={product} />
-            </div>
-          </div>
+    <main className="bg-[#fdfdfd] min-h-screen">
+      <section className="bg-[#F5F9FF] py-8 mb-12">
+        <div className="container-lg">
+          <Breadcrumb
+            items={[
+              { label: "Products & Services", href: "/products" },
+              { label: "Product Details" },
+            ]}
+            centered
+            separator="//"
+            uppercase
+            hideHomeIcon
+          />
         </div>
       </section>
 
+      <div className="container-lg pb-8 md:pb-12">
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+          {/* Main Content — 2/3 width */}
+          <div className="lg:col-span-2 flex flex-col gap-10">
+            <ProductHeader product={product} />
+            <ProductOverview product={product} />
+          </div>
+
+          {/* Sidebar — 1/3 width */}
+          <div className="lg:col-span-1 sticky top-24">
+            <ProductPriceBlock product={product} />
+          </div>
+        </div>
+      </div>
+
       <RelatedProducts currentSlug={slug} />
-    </>
+    </main>
   )
 }

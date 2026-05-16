@@ -18,13 +18,13 @@ export default function RelatedProducts({ currentSlug }: RelatedProductsProps) {
   const related = products.filter((p) => p.slug !== currentSlug).slice(0, 3)
 
   return (
-    <section className="section-padding bg-surface">
+    <section className="py-8 md:py-12 bg-surface">
       <div className="container-lg">
         <SectionHeading
           label="Related Products"
           title="You Might Also Like"
           align="center"
-          className="mb-12"
+          className="mb-8 md:mb-10"
         />
         <motion.div
           variants={stagger}

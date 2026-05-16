@@ -5,7 +5,7 @@ export const contactHeading = {
 
 export const contactInfo = [
   {
-    icon: "/figmaAssets/component-1-14.svg",
+    icon: "/figmaAssets/component-1-15.svg",
     title: "Address",
     content: ["South Tangerang, Banten, Indonesia"],
   },

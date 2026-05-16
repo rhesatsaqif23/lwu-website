@@ -1,7 +1,9 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ShieldCheck, Tag, ArrowRight } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import Image from "next/image"
 import type { Product } from "@/types"
 
 interface ProductPriceBlockProps {
@@ -9,40 +11,53 @@ interface ProductPriceBlockProps {
 }
 
 export default function ProductPriceBlock({ product }: ProductPriceBlockProps) {
-  const isContact = product.price === "Contact for Pricing"
-
   return (
-    <motion.aside
-      initial={{ opacity: 0, x: 24 }}
-      animate={{ opacity: 1, x: 0 }}
+    <motion.div
+      initial={{ opacity: 0, x: 20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className="bg-white rounded-2xl border border-gray-100 shadow-lg p-6 flex flex-col gap-5 sticky top-24"
     >
-      {/* Price */}
-      <div>
-        <div className="flex items-center gap-2 mb-1">
-          <Tag className="w-4 h-4 text-secondary" />
-          <span className="text-[11px] font-semibold text-secondary tracking-wide">
-            Limited Time Offer
-          </span>
+      <Card className="rounded-2xl border-2 border-gray-100 shadow-sm overflow-hidden bg-white">
+      <CardContent className="p-4 md:p-5 flex flex-col gap-5 md:gap-6">
+        {/* Thumbnail */}
+        <div className="relative w-full aspect-323/213 rounded-lg md:rounded-xl overflow-hidden shadow-sm">
+          <Image
+            src={product.image}
+            alt={product.title}
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/5 hover:bg-black/10 transition-colors" />
         </div>
-        <p className="text-3xl font-bold text-primary">{product.price}</p>
-      </div>
 
-      {/* CTA */}
-      <button className="w-full bg-secondary hover:bg-secondary-dark text-white font-bold py-3.5 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2">
-        {isContact ? "Contact Us" : "Get Yours"}
-        <ArrowRight className="w-4 h-4" />
-      </button>
+        {/* Pricing & Badge */}
+        <div className="flex items-center justify-between gap-4 mt-1 md:mt-2">
+          <p className="text-2xl md:text-[28px] font-bold text-primary">{product.price}</p>
+          <Badge className="bg-[#FFE5E5] text-[#FF4B4B] hover:bg-[#FFE5E5] border-none px-2 md:px-3 py-1 md:py-1.5 text-[10px] md:text-xs font-bold rounded-[3px]">
+            7 Days Left!
+          </Badge>
+        </div>
 
-      {/* Guarantee */}
-      <div className="flex items-start gap-3 pt-4 border-t border-gray-100">
-        <ShieldCheck className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-        <p className="text-xs text-muted leading-relaxed">
-          <span className="font-semibold text-primary">30-Day Money-Back Guarantee.</span>{" "}
-          Not satisfied? We&apos;ll give you a full refund, no questions asked.
-        </p>
-      </div>
-    </motion.aside>
+        {/* Action Button */}
+        <a 
+          href={product.ctaLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center w-full h-12 md:h-14 rounded-md bg-primary text-white font-bold text-base md:text-lg hover:bg-primary/90 transition-all shadow-md cursor-pointer"
+        >
+          BUY NOW
+        </a>
+
+        {/* Guarantee Info */}
+        <div className="flex items-center justify-center gap-2 py-1 md:py-2">
+          <div className="relative w-3 h-3 md:w-3.5 md:h-3.5">
+            <Image src="/figmaAssets/component-5-2.svg" alt="Check" fill />
+          </div>
+          <p className="text-xs md:text-[13px] font-medium text-muted/90">30-Day Money-Back Guarantee</p>
+        </div>
+      </CardContent>
+    </Card>
+    </motion.div>
   )
 }

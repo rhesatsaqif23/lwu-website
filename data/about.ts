@@ -1,8 +1,8 @@
 export const aboutHeadlineContent = {
-  eyebrow: "About Us",
-  title: "Empowering Learners Since 2017.",
+  eyebrow: "About LWU",
+  title: "Our Story",
   description:
-    "Learning With Us is an online English course platform helping 1,000+ students achieve their goals in General English, IELTS, Business English, and Self-Development. We make learning flexible, practical, and results-driven for learners of all ages.",
+    "Learning With Us (LWU) was founded in 2017 as private in-person English classes in South Tangerang, Banten, Indonesia. Driven by a passion for accessible education, LWU transitioned to a fully online model in 2019.\n\nToday, LWU serves 1,000+ students aged 7–62 across Indonesia and internationally, offering General English, IELTS, Business English, and Self-Development programs. Our flexible, results-driven approach has helped countless learners achieve their language goals and open new opportunities.",
 };
 
 export const aboutItems = [
@@ -25,8 +25,24 @@ export const aboutItems = [
 ];
 
 export const stats = [
-  { value: "7+", label: "Years Serving English Learners" },
-  { value: "1,000+", label: "Students Achieved Their Goals" },
-  { value: "15+", label: "Certified Instructors" },
-  { value: "5+", label: "Course Programs Available" },
+  {
+    value: "7+",
+    label: "Years Serving English Learners",
+    icon: "/figmaAssets/component-1-11.svg",
+  },
+  {
+    value: "1,000+",
+    label: "Students Achieved Their Goals",
+    icon: "/figmaAssets/component-1-12.svg",
+  },
+  {
+    value: "15+",
+    label: "Certified Instructors",
+    icon: "/figmaAssets/component-1-13.svg",
+  },
+  {
+    value: "6+",
+    label: "Course Programs Available",
+    icon: "/figmaAssets/component-1-14.svg",
+  },
 ];

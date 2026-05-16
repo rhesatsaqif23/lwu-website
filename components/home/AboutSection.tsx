@@ -66,7 +66,7 @@ const AboutDescriptionSection = () => {
                     {item.title}
                   </h3>
                 </header>
-                <p className="-mt-px self-stretch text-sm font-normal leading-[21px] text-slate-700 font-sans">
+                <p className="-mt-px self-stretch text-xs md:text-sm font-normal leading-relaxed text-slate-700 font-sans">
                   {item.description}
                 </p>
               </CardContent>
@@ -80,7 +80,7 @@ const AboutDescriptionSection = () => {
 
 export default function AboutSection() {
   return (
-    <section className="w-full py-16 xl:py-[120px] bg-white overflow-hidden">
+    <section className="w-full py-12 md:py-16 bg-white overflow-hidden">
       <motion.div 
         initial="hidden"
         whileInView="visible"

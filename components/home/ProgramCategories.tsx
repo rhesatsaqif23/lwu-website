@@ -37,28 +37,28 @@ const ProgramCard = ({ category }: { category: ProgramCategory }) => {
               href={category.href}
               className="flex w-full flex-col items-center text-center group h-full"
             >
-              <div className="relative h-20 w-20 flex items-center justify-center mb-8">
+              <div className="relative h-16 w-16 md:h-20 md:w-20 flex items-center justify-center mb-6 md:mb-8">
                 {/* Background Circle */}
                 <div className="absolute inset-0 bg-blue-50/80 rounded-full scale-110 z-0 group-hover:scale-125 transition-transform duration-300" />
                 
                 {/* Lucide Icon */}
                 <div className="relative z-10 flex items-center justify-center">
                   <Icon 
-                    className="w-10 h-10 text-primary group-hover:scale-110 transition-transform duration-300" 
+                    className="w-8 h-8 md:w-10 md:h-10 text-primary group-hover:scale-110 transition-transform duration-300" 
                     strokeWidth={1.5}
                   />
                 </div>
               </div>
 
-              <div className="flex h-0.5 w-[30px] bg-primary group-hover:w-full transition-all duration-300 mb-8" />
+              <div className="flex h-0.5 w-[30px] bg-primary group-hover:w-full transition-all duration-300 mb-6 md:mb-8" />
 
-              <header className="pb-[20px] mt-auto">
-                <h3 className="font-sans text-2xl font-bold leading-[30px] tracking-normal text-primary group-hover:text-secondary transition-colors">
+              <header className="pb-[14px] md:pb-[20px] mt-auto">
+                <h3 className="font-sans text-xl md:text-2xl font-bold leading-tight md:leading-[30px] tracking-normal text-primary group-hover:text-secondary transition-colors">
                   {category.title}
                 </h3>
               </header>
 
-              <p className="font-sans text-base font-normal leading-6 tracking-normal text-primary mb-auto">
+              <p className="font-sans text-sm md:text-base font-normal leading-relaxed md:leading-6 tracking-normal text-primary mb-auto">
                 {category.description}
               </p>
             </Link>
@@ -71,7 +71,7 @@ const ProgramCard = ({ category }: { category: ProgramCategory }) => {
 
 export default function ProgramCategories() {
   return (
-    <section className="w-full bg-[#f6f9fe] py-16 md:py-[100px]">
+    <section className="w-full bg-[#f6f9fe] py-12 md:py-16">
       <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center gap-[50px] md:gap-[70px] px-4 sm:px-6 lg:px-8 xl:px-24">
         <section className="flex w-full justify-center self-stretch">
           <div className="flex w-full max-w-[367px] flex-col items-center gap-3.5">

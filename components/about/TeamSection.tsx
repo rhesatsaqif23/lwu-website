@@ -1,9 +1,11 @@
 "use client"
 
 import { motion, Variants } from "framer-motion"
-import { Star } from "lucide-react"
+import Image from "next/image"
 import SectionHeading from "@/components/shared/SectionHeading"
 import { team } from "@/data/team"
+import { Card, CardContent } from "@/components/ui/card"
+import { Star } from "lucide-react"
 
 const stagger: Variants = {
   hidden: {},
@@ -17,13 +19,14 @@ const fadeUp: Variants = {
 
 export default function TeamSection() {
   return (
-    <section className="py-20 md:py-24 bg-white">
+    <section className="py-12 md:py-16 bg-white overflow-hidden">
       <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24">
         <SectionHeading
-          label="Team"
+          label="Our Team"
           title="Our Expert Team"
           align="center"
-          className="mb-12"
+          className="mb-10 md:mb-16"
+          titleClassName="text-3xl md:text-4xl lg:text-[42px] leading-tight"
         />
 
         <motion.div
@@ -31,32 +34,54 @@ export default function TeamSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12"
         >
           {team.map((member) => (
-            <motion.div
+            <motion.article
               key={member.name}
               variants={fadeUp}
-              whileHover={{ scale: 1.02, y: -4 }}
-              transition={{ duration: 0.2 }}
-              className="bg-surface rounded-[12px] border border-gray-100 p-6 flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300"
+              className="flex h-full flex-col items-center group"
             >
-              {/* Avatar */}
-              <div className="w-20 h-20 rounded-full gradient-primary flex items-center justify-center mb-4 shadow-md">
-                <span className="text-white font-bold text-2xl">
-                  {member.name.charAt(0)}
-                </span>
-              </div>
+              {/* Image Container */}
+              <Card className="w-full overflow-hidden rounded-[10px] border-0 bg-transparent p-0 shadow-none mb-8">
+                <CardContent className="p-0">
+                  <div className="relative aspect-323/408 w-full overflow-hidden rounded-[10px] bg-slate-100">
+                    <Image
+                      src={member.image || "/figmaAssets/instructor-collection-image.png"}
+                      alt={member.name}
+                      fill
+                      priority={team.indexOf(member) === 0}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                </CardContent>
+              </Card>
 
-              <h3 className="font-bold text-primary text-[11px] mb-0.5">{member.name}</h3>
-              <p className="text-muted text-[11px] mb-3">{member.title}</p>
+              {/* Info Container */}
+              <div className="flex flex-col items-center text-center">
+                {/* Rating */}
+                <div className="flex items-center gap-1.5 mb-3">
+                  <span className="text-sm font-semibold text-primary">
+                    {member.rating}
+                  </span>
+                  <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
+                  <span className="text-sm font-semibold text-primary">
+                    (Rating)
+                  </span>
+                </div>
 
-              {/* Rating */}
-              <div className="flex items-center gap-1">
-                <Star className="w-3.5 h-3.5 fill-accent text-accent" />
-                <span className="text-xs font-semibold text-primary">{member.rating}</span>
+                {/* Name */}
+                <h3 className="text-xl md:text-2xl font-bold text-primary mb-2 leading-tight">
+                  {member.name}
+                </h3>
+
+                {/* Role */}
+                <p className="text-sm md:text-base italic font-medium text-primary/80">
+                  {member.title}
+                </p>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </motion.div>
       </div>
