@@ -7,7 +7,7 @@ export const contactHeading = {
 
 export const contactInfo: ContactInfoItem[] = [
   {
-    icon: "/figmaAssets/component-1-15.svg",
+    icon: "/figmaAssets/icon-location.svg",
     title: "Address",
     content: ["South Tangerang, Banten, Indonesia"],
   },
@@ -19,7 +19,7 @@ export const contactInfo: ContactInfoItem[] = [
     ],
   },
   {
-    icon: "/figmaAssets/component-1-7.svg",
+    icon: "/figmaAssets/icon-mail.svg",
     title: "E-mail",
     content: [
       { label: "General Inquiry", value: "lwuid.info@gmail.com" },

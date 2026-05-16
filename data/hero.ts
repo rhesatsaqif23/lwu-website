@@ -13,9 +13,9 @@ export const heroContent = {
   ctaLink: "/about",
   images: {
     background: [
-      { src: "/figmaAssets/vector-5.svg", top: "0" },
-      { src: "/figmaAssets/vector-23.svg", top: "19.33%" },
+      { src: "/figmaAssets/bg-hero-accent-1.svg", top: "0" },
+      { src: "/figmaAssets/bg-hero-accent-2.svg", top: "19.33%" },
     ],
-    main: "/figmaAssets/div-hero-image-block-margin.svg",
+    main: "/figmaAssets/hero-illustration.svg",
   },
 };

@@ -19,7 +19,7 @@ const iconMap: Record<string, LucideIcon> = {
 export default function ProductHeader({ product }: ProductHeaderProps) {
   const ratingStars = Array.from({ length: 5 }, (_, index) => ({
     id: `star-${index}`,
-    src: "/figmaAssets/component-5-1.svg",
+    src: "/figmaAssets/icon-star.svg",
   }))
 
   return (
@@ -38,10 +38,11 @@ export default function ProductHeader({ product }: ProductHeaderProps) {
         <div className="flex items-center gap-3 md:gap-4">
           <div className="relative h-12 w-12 md:h-[58px] md:w-[58px] overflow-hidden rounded-full border-2 border-white shadow-sm bg-slate-50">
             <Image
-              src="/figmaAssets/cropped-circle-image-1-1.png"
+              src="/figmaAssets/lwu-logo.png"
               alt="Author"
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 48px, 58px"
             />
           </div>
           <div className="flex flex-col">
@@ -53,7 +54,14 @@ export default function ProductHeader({ product }: ProductHeaderProps) {
         {/* Category */}
         <div className="flex items-center gap-3 md:gap-4">
           <div className="flex items-center justify-center h-8 w-8 md:h-10 md:w-10">
-             <Image src="/figmaAssets/component-1-16.svg" alt="Category" width={28} height={36} className="object-contain" />
+             <Image 
+               src="/figmaAssets/icon-category.svg" 
+               alt="Category" 
+               width={28} 
+               height={36} 
+               className="object-contain" 
+               style={{ height: 'auto' }}
+             />
           </div>
           <div className="flex flex-col">
             <span className="text-xs md:text-sm font-semibold text-muted tracking-wide">Category</span>
@@ -100,6 +108,7 @@ export default function ProductHeader({ product }: ProductHeaderProps) {
           alt={product.title}
           fill
           className="object-cover"
+          sizes="(max-width: 768px) 100vw, 800px"
           priority
         />
       </div>

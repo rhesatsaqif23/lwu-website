@@ -44,10 +44,11 @@ export default function KeyStats() {
                   {/* Icon */}
                   <div className="relative h-16 w-16 md:h-[76px] md:w-[76px] mb-6 md:mb-8">
                     <Image
-                      src={stat.icon || "/figmaAssets/component-1.svg"}
+                      src={stat.icon || "/figmaAssets/icon-ebook.svg"}
                       alt={stat.label}
                       fill
                       className="object-contain"
+                      sizes="(max-width: 768px) 64px, 76px"
                     />
                   </div>
                   

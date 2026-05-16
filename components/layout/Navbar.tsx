@@ -8,7 +8,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "@/data/navigation";
 import { cn } from "@/lib/utils";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
@@ -40,7 +39,7 @@ export default function Navbar() {
             <Image
               className="size-10 shrink-0 object-cover"
               alt="Learning With Us Logo"
-              src="/figmaAssets/cropped-circle-image-1-1.png"
+              src="/figmaAssets/lwu-logo.png"
               width={40}
               height={40}
             />
@@ -81,23 +80,7 @@ export default function Navbar() {
 
           {/* Right Actions Section */}
           <div className="hidden md:flex shrink-0 items-center justify-end gap-4 sm:gap-5">
-            {/* User Profile */}
-            <Link className="flex items-center gap-2 group" href="#">
-              <Avatar className="size-9 rounded-full border border-gray-200">
-                <AvatarImage src="/figmaAssets/user-image.png" alt="Rhesa" />
-                <AvatarFallback className="text-xs bg-primary text-white">
-                  R
-                </AvatarFallback>
-              </Avatar>
-              <span className="hidden xl:inline text-sm font-semibold leading-6 text-primary group-hover:text-secondary transition-colors">
-                Rhesa
-              </span>
-            </Link>
 
-            <Separator
-              orientation="vertical"
-              className="h-4 w-0.5 bg-gray-200"
-            />
 
             {/* Notifications */}
             <button
@@ -108,7 +91,7 @@ export default function Navbar() {
               <Image
                 className="size-6"
                 alt="Notification Icon"
-                src="/figmaAssets/component-1-1.svg"
+                src="/figmaAssets/icon-notification.svg"
                 width={24}
                 height={24}
               />
@@ -176,17 +159,7 @@ export default function Navbar() {
                 </button>
               </div>
 
-              {/* Drawer Profile (Mobile) */}
-              <div className="px-6 py-4 border-b border-gray-50 flex items-center gap-3">
-                <Avatar className="h-10 w-10 rounded-full border border-gray-200">
-                  <AvatarImage src="/figmaAssets/user-image.png" alt="Rhesa" />
-                  <AvatarFallback>R</AvatarFallback>
-                </Avatar>
-                <div className="flex flex-col">
-                  <span className="text-sm font-bold text-primary">Rhesa</span>
-                  <span className="text-xs text-gray-500">Student</span>
-                </div>
-              </div>
+
 
               {/* Drawer nav links */}
               <nav className="flex flex-col gap-1 p-4 flex-1">
@@ -227,7 +200,7 @@ export default function Navbar() {
       </AnimatePresence>
 
       {/* Spacer to push content below fixed navbar */}
-      <div className="h-20 lg:h-[82px]" />
+      <div className="h-[72px]" />
     </>
   );
 }

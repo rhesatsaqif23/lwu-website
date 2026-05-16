@@ -7,11 +7,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 const scholarshipContent = {
-  eyebrow: "Programs",
+  eyebrow: "Products",
   title: "What We Offer",
   description:
-    "We offer flexible, expert-led courses designed for every level. Whether you're starting your English journey or preparing for international certification, our programs combine practical skills with personal development. All courses are available online, letting you learn anytime, anywhere.",
-  cta: "VIEW ALL PROGRAMS",
+    "We offer flexible, expert-led courses designed for every level. Whether you're starting your English journey or preparing for international certification, our products combine practical skills with personal development. All courses are available online, letting you learn anytime, anywhere.",
+  cta: "VIEW ALL PRODUCTS",
 }
 
 const fadeUp: Variants = {
@@ -47,7 +47,7 @@ export default function WhatWeOffer() {
                 <Image
                   className="object-contain"
                   alt="Scholarship program preview"
-                  src="/figmaAssets/scholarship-screen--image.png"
+                  src="/figmaAssets/programs-preview.png"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 648px"
                   priority

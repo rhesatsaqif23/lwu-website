@@ -27,6 +27,7 @@ export default function ProductPriceBlock({ product }: ProductPriceBlockProps) {
             alt={product.title}
             fill
             className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 400px"
           />
           <div className="absolute inset-0 bg-black/5 hover:bg-black/10 transition-colors" />
         </div>
@@ -52,7 +53,12 @@ export default function ProductPriceBlock({ product }: ProductPriceBlockProps) {
         {/* Guarantee Info */}
         <div className="flex items-center justify-center gap-2 py-1 md:py-2">
           <div className="relative w-3 h-3 md:w-3.5 md:h-3.5">
-            <Image src="/figmaAssets/component-5-2.svg" alt="Check" fill />
+            <Image 
+              src="/figmaAssets/icon-check.svg" 
+              alt="Check" 
+              fill 
+              sizes="14px"
+            />
           </div>
           <p className="text-xs md:text-[13px] font-medium text-muted/90">30-Day Money-Back Guarantee</p>
         </div>

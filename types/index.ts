@@ -73,12 +73,17 @@ export interface ProgramCategory {
 // ─── Service Types ────────────────────────────────────────────────────────────
 
 export interface Service {
+  id: string;
   slug: string;
-  by: string;
   title: string;
-  type: string;
-  meta: string;
+  category: string;
+  description: string;
+  image: string;
+  date: string;
   ctaLabel: string;
+  ctaLink: string;
+  instructors: string[];
+  highlights: string[];
 }
 
 // ─── Contact Types ────────────────────────────────────────────────────────────

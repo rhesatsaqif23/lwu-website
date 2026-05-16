@@ -13,11 +13,11 @@ export const products: Product[] = [
     price: "$4.99",
     image: "https://public-files.gumroad.com/hb5csmjzrbc8q93bu17ywvd5te1f",
     ctaLink: "https://learningwithus.gumroad.com/l/jndcs",
-    buyIcon: "/figmaAssets/component-1-2.svg",
+    buyIcon: "/figmaAssets/icon-buy-lynk.svg",
     meta: [
-      { icon: "/figmaAssets/component-1-8.svg", text: "400 entries" },
-      { icon: "/figmaAssets/component-1.svg", text: "Ebook" },
-      { iconBg: "bg-[url(/figmaAssets/vector-9.svg)]", text: "5.0" },
+      { icon: "/figmaAssets/icon-list.svg", text: "400 entries" },
+      { icon: "/figmaAssets/icon-ebook.svg", text: "Ebook" },
+      { iconBg: "bg-[url(/figmaAssets/icon-rating-bg.svg)]", text: "5.0" },
     ],
     intro:
       "This comprehensive ebook breaks down 400 essential differences between British and American English. Do you say 'lift' or 'elevator'? 'Holiday' or 'vacation'? If you've ever been confused by British and American English, you're not alone. This book makes everything clear, simple, and surprisingly fun to learn.",
@@ -50,11 +50,11 @@ export const products: Product[] = [
     price: "IDR 49,900",
     image: "https://public-files.gumroad.com/p7woxf98f3d5vgygv970c05n8fud",
     ctaLink: "https://lynk.id/lwu_id/og12k230ywx9/checkout",
-    buyIcon: "/figmaAssets/component-1-2.svg",
+    buyIcon: "/figmaAssets/icon-buy-lynk.svg",
     meta: [
-      { icon: "/figmaAssets/component-1-8.svg", text: "400 entries" },
-      { icon: "/figmaAssets/component-1.svg", text: "Ebook" },
-      { iconBg: "bg-[url(/figmaAssets/vector-9.svg)]", text: "5.0" },
+      { icon: "/figmaAssets/icon-list.svg", text: "400 entries" },
+      { icon: "/figmaAssets/icon-ebook.svg", text: "Ebook" },
+      { iconBg: "bg-[url(/figmaAssets/icon-rating-bg.svg)]", text: "5.0" },
     ],
     intro:
       "Ebook yang membahas 400 perbedaan penting antara British dan American English. Apakah Anda mengatakan 'lift' atau 'elevator'? 'Holiday' atau 'vacation'? Jika Anda pernah bingung dengan perbedaan ini, Anda tidak sendirian. Buku ini membuat semuanya jelas, sederhana, dan mengejutkan menyenangkan untuk dipelajari.",
@@ -87,11 +87,11 @@ export const products: Product[] = [
     price: "$15.00",
     image: "https://public-files.gumroad.com/cccdsec7mtt4uw8w5wc46zhanrm1",
     ctaLink: "https://learningwithus.gumroad.com/l/sfryhb",
-    buyIcon: "/figmaAssets/component-1-3.svg",
+    buyIcon: "/figmaAssets/icon-buy-gumroad.svg",
     meta: [
-      { icon: "/figmaAssets/component-1-8.svg", text: "90 pages" },
-      { icon: "/figmaAssets/component-1.svg", text: "Ebook" },
-      { iconBg: "bg-[url(/figmaAssets/vector-9.svg)]", text: "4.8" },
+      { icon: "/figmaAssets/icon-list.svg", text: "90 pages" },
+      { icon: "/figmaAssets/icon-ebook.svg", text: "Ebook" },
+      { iconBg: "bg-[url(/figmaAssets/icon-rating-bg.svg)]", text: "4.8" },
     ],
     intro:
       "Learn English grammar through an engaging comic story. No headaches. No complications. Through comics. If you feel like grammar is always confusing, this ebook was created for one simple purpose: To help you finally understand basic English grammar. Even if you feel like you're starting from scratch.",
@@ -125,11 +125,11 @@ export const products: Product[] = [
     image:
       "https://cdn.lynkid.my.id/products/19-03-2026/1773907276391_5776139.webp",
     ctaLink: "https://lynk.id/lwu_id/zr422x33rng7",
-    buyIcon: "/figmaAssets/component-1-2.svg",
+    buyIcon: "/figmaAssets/icon-buy-lynk.svg",
     meta: [
-      { icon: "/figmaAssets/component-1-8.svg", text: "Comic + Translation" },
-      { icon: "/figmaAssets/component-1.svg", text: "Ebook" },
-      { iconBg: "bg-[url(/figmaAssets/vector-9.svg)]", text: "4.8" },
+      { icon: "/figmaAssets/icon-list.svg", text: "Comic + Translation" },
+      { icon: "/figmaAssets/icon-ebook.svg", text: "Ebook" },
+      { iconBg: "bg-[url(/figmaAssets/icon-rating-bg.svg)]", text: "4.8" },
     ],
     intro:
       "Pelajari tata bahasa Inggris melalui cerita komik yang menarik dalam bahasa Inggris dan Indonesia. Tanpa pusing. Tanpa rumit. Lewat komik. Ebook ini dibuat untuk satu tujuan sederhana: Membantu Anda akhirnya mengerti tata bahasa dasar bahasa Inggris, bahkan jika Anda merasa memulai dari nol.",
@@ -163,11 +163,11 @@ export const products: Product[] = [
     image:
       "https://cdn.lynkid.my.id/products/19-03-2026/1773907840656_8749596.webp",
     ctaLink: "https://lynk.id/lwu_id/n341k550575v",
-    buyIcon: "/figmaAssets/component-1-2.svg",
+    buyIcon: "/figmaAssets/icon-buy-lynk.svg",
     meta: [
-      { icon: "/figmaAssets/component-1-8.svg", text: "English Only" },
-      { icon: "/figmaAssets/component-1.svg", text: "Ebook" },
-      { iconBg: "bg-[url(/figmaAssets/vector-9.svg)]", text: "4.7" },
+      { icon: "/figmaAssets/icon-list.svg", text: "English Only" },
+      { icon: "/figmaAssets/icon-ebook.svg", text: "Ebook" },
+      { iconBg: "bg-[url(/figmaAssets/icon-rating-bg.svg)]", text: "4.7" },
     ],
     intro:
       "The same engaging grammar comic in an English only version. This is ideal for learners who want full English immersion while learning grammar through a story. No headaches and no complications as you learn through comics.",
@@ -201,11 +201,11 @@ export const products: Product[] = [
     image:
       "https://cdn.lynkid.my.id/products/14-03-2026/1773486361272_8349449.webp",
     ctaLink: "https://lynk.id/lwu_id/e1zxxpgkvk9d",
-    buyIcon: "/figmaAssets/component-1-2.svg",
+    buyIcon: "/figmaAssets/icon-buy-lynk.svg",
     meta: [
-      { icon: "/figmaAssets/component-1-8.svg", text: "100+ scholarships" },
-      { icon: "/figmaAssets/component-1.svg", text: "Ebook" },
-      { iconBg: "bg-[url(/figmaAssets/vector-9.svg)]", text: "4.6" },
+      { icon: "/figmaAssets/icon-list.svg", text: "100+ scholarships" },
+      { icon: "/figmaAssets/icon-ebook.svg", text: "Ebook" },
+      { iconBg: "bg-[url(/figmaAssets/icon-rating-bg.svg)]", text: "4.6" },
     ],
     intro:
       "Stop opening dozens of websites to search for scholarships. This ebook compiles hundreds of scholarship opportunities from around the world in one practical guide. Temukan ratusan beasiswa dalam 1 ebook tanpa harus membuka puluhan website.",

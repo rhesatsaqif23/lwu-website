@@ -10,7 +10,7 @@ export const aboutItems = [
     title: "Our Vision",
     description:
       "To be the leading platform for English proficiency and personal development, nurturing confident, capable, and future-ready individuals.",
-    iconSrc: "/figmaAssets/component-1-17.svg",
+    iconSrc: "/figmaAssets/icon-vision.svg",
     iconAlt: "Our Vision icon",
     titleClassName: "leading-[30px]",
   },
@@ -18,7 +18,7 @@ export const aboutItems = [
     title: "Our Mission",
     description:
       "To empower individuals to reach their full potential by mastering global communication and essential life skills.",
-    iconSrc: "/figmaAssets/component-1-8.svg",
+    iconSrc: "/figmaAssets/icon-list.svg",
     iconAlt: "Our Mission icon",
     titleClassName: "leading-9",
   },
@@ -28,21 +28,21 @@ export const stats = [
   {
     value: "7+",
     label: "Years Serving English Learners",
-    icon: "/figmaAssets/component-1-11.svg",
+    icon: "/figmaAssets/icon-calendar.svg",
   },
   {
     value: "1,000+",
     label: "Students Achieved Their Goals",
-    icon: "/figmaAssets/component-1-12.svg",
+    icon: "/figmaAssets/icon-users.svg",
   },
   {
     value: "15+",
     label: "Certified Instructors",
-    icon: "/figmaAssets/component-1-13.svg",
+    icon: "/figmaAssets/icon-teacher.svg",
   },
   {
     value: "6+",
-    label: "Course Programs Available",
-    icon: "/figmaAssets/component-1-14.svg",
+    label: "Course Products Available",
+    icon: "/figmaAssets/icon-certificate.svg",
   },
 ];

@@ -12,6 +12,8 @@ import {
   LinkedinLogo 
 } from "@/components/shared/SocialLogos"
 
+import { navLinks } from "@/data/navigation"
+
 const socialLinks = [
   {
     label: "Instagram",
@@ -40,13 +42,6 @@ const socialLinks = [
   },
 ]
 
-const footerLinks = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Products & Services", href: "/products" },
-  { label: "Contact", href: "/contact" },
-]
-
 const categoryLinks = [
   "General English",
   "IELTS",
@@ -63,7 +58,7 @@ function FooterBrandSection() {
             className="object-cover"
             style={{ width: '48px', height: 'auto' }}
             alt="Learning With Us Logo"
-            src="/figmaAssets/cropped-circle-image-1-1.png"
+            src="/figmaAssets/lwu-logo.png"
             width={50}
             height={50}
           />
@@ -109,7 +104,7 @@ function FooterNavColumnSection() {
       </h2>
       <nav aria-label="Footer pages">
         <ul className="flex flex-col gap-4">
-          {footerLinks.map((link) => (
+          {navLinks.map((link) => (
             <li key={link.label}>
               <Link
                 href={link.href}
